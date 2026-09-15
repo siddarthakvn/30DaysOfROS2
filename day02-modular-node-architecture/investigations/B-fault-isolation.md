@@ -54,10 +54,15 @@ After the Camera Daemon crashed:
 
 The remaining daemons were completely unaffected by the Camera Daemon failure.
 
-Screenshots:
+### All four daemons running as independent processes
 
-- `expB_all_daemons_running.png`
-- `expB_camera_crashed_others_alive.png`
+![All four daemons running simultaneously in separate terminals](../assets/expB_all_daemons_running.png)
+
+---
+
+### The Camera daemon crashes while the others keep running
+
+![Camera daemon terminated while GPS, IMU and Motor daemons continue](../assets/expB_camera_crashed_others_alive.png)
 
 ---
 
@@ -79,7 +84,7 @@ Independent processes provide fault isolation.
 
 A software failure inside one subsystem does not terminate unrelated subsystems, allowing the robotic system to continue operating despite partial failures.
 
-This modular architecture is one of the fundamental design principles adopted by ROS 2.
+ROS 2 encourages modular **nodes**, but this investigation only proved the **process** half of the story. Investigation C asks whether a ROS 2 node boundary alone is enough — or whether isolation still requires separate processes.
 
 ---
 
@@ -104,4 +109,4 @@ This level of reliability is only possible because the robot is designed as a co
 - Independent processes improve software reliability.
 - Faults remain isolated to the affected module.
 - Modular architectures are easier to maintain and extend.
-- ROS 2 adopts this design philosophy by organising robotic applications into independent nodes.
+- The next question (Investigation C): does a ROS 2 *node* provide this isolation, or only an OS *process*?

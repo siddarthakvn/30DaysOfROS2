@@ -51,10 +51,15 @@ After the Camera Module generated an exception:
 - Motor Controller stopped.
 - The entire robotic software exited.
 
-Screenshots:
+### All four modules running inside one process
 
-- `expA_monolithic_running.png`
-- `expA_monolithic_crash.png`
+![All four modules executing sequentially inside a single Python process](../assets/expA_monolithic_running.png)
+
+---
+
+### One unhandled exception terminates everything
+
+![The unhandled camera exception terminates the entire application](../assets/expA_monolithic_crash.png)
 
 ---
 

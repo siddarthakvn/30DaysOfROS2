@@ -6,7 +6,7 @@
 
 **Answer**
 
-A ROS 2 node is an independent executable responsible for performing a specific task within a robotic system. Nodes communicate with each other using ROS 2 communication mechanisms such as topics, services, and actions.
+A ROS 2 node is a named unit of responsibility in the ROS graph — typically one focused task with its own publishers, subscribers, services, actions, and parameters. It is not the same thing as an OS process: multiple nodes can share one process (composition), or a node can run alone in its own process.
 
 ---
 
@@ -14,7 +14,7 @@ A ROS 2 node is an independent executable responsible for performing a specific 
 
 **Answer**
 
-Modular software improves maintainability, scalability, fault isolation, and reusability. Each module performs a single responsibility and can be developed, tested, and updated independently.
+Modular software improves maintainability, scalability, reusability, and clear ownership of subsystems. Each module can be developed, tested, and updated independently. Fault isolation is related but is not automatic from modularity alone — it depends on process deployment (see Investigation C).
 
 ---
 
@@ -32,7 +32,7 @@ A Single Point of Failure is a component whose failure causes the entire system 
 
 **Answer**
 
-Keeping each sensor in its own node isolates failures, simplifies debugging, improves maintainability, and allows hardware to be replaced without affecting unrelated parts of the system.
+Separate sensor nodes give clean interfaces, independent testing, easier hardware swaps, and the *option* to isolate faults later by running them in separate processes. A separate node alone does not guarantee fault isolation if those nodes are composed into one process.
 
 ---
 
@@ -40,7 +40,7 @@ Keeping each sensor in its own node isolates failures, simplifies debugging, imp
 
 **Answer**
 
-Fault Isolation is the ability of a system to contain failures within the affected module so that the remaining components continue operating normally.
+Fault isolation is the ability to contain a failure so unrelated work can continue. In today's experiments, that containment came from **OS process** boundaries (separate address spaces and lifetimes), not from ROS node names by themselves.
 
 ---
 
@@ -56,11 +56,9 @@ Each daemon was executed as an independent operating system process with its own
 
 **Answer**
 
-Not always.
+No. A node is a graph participant; a process is a deployment choice.
 
-In most applications, each node runs in its own process.
-
-However, ROS 2 also supports composable nodes, where multiple nodes execute inside a single process to reduce communication overhead and improve performance.
+ROS 2 supports running nodes in separate processes (process/fault isolation, easier per-node debugging) or composing many nodes into one process (lower overhead, optional intra-process communication). Investigation C showed the same four nodes surviving a camera fault only in the multi-process deployment.
 
 ---
 
@@ -70,9 +68,9 @@ However, ROS 2 also supports composable nodes, where multiple nodes execute insi
 
 **Answer**
 
-Not necessarily.
+One node per sensor is generally good practice for interfaces and ownership. Exceptions exist when sensors are tightly coupled or must be synchronized as one unit.
 
-While one node per sensor is generally good practice, multiple sensors may be grouped together when they are tightly coupled, require synchronized processing, or have strict performance requirements. The decision depends on the system architecture and engineering trade-offs.
+Separately: even with one node per sensor, you still decide process layout. Tight perception pipelines may be composed; safety-critical drivers usually keep their own process.
 
 ---
 
@@ -146,3 +144,11 @@ Provide examples from today's experiments.
 If you were designing a Search and Rescue Robot, how would you divide the robot into independent ROS 2 nodes?
 
 Explain your reasoning.
+
+---
+
+### Q6.
+
+You have four sensor nodes. In deployment A each runs in its own process. In deployment B all four are composed into one process. A camera driver raises an unhandled exception.
+
+What happens in A vs B, and what does that teach about nodes vs processes?

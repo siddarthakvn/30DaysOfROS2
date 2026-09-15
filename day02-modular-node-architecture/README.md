@@ -4,108 +4,121 @@
 >
 > **Should every sensor be a separate ROS 2 node?**
 
+*(Curriculum alternate: why design around nodes instead of one giant robot program? Same intent.)*
+
 ---
 
 ## Objective
 
-In Day 1, we explored how ROS 2 nodes discover each other without a ROS Master.
+Day 01 showed how ROS 2 nodes find each other without a ROS Master.
 
-In Day 2, we step back from ROS and investigate a more fundamental software engineering question:
+Day 02 asks a more fundamental architecture question: why split a robot into modules at all — and whether a ROS 2 **node** is the same thing as a fault-isolation boundary.
 
-**Why is modern robotic software designed as multiple independent nodes instead of one large application?**
-
-Rather than accepting modularity as a ROS convention, this investigation demonstrates the architectural reasons behind it through practical experiments.
+Investigations A and B use plain Python to show process-level SPOF vs isolation. Investigation C uses real ROS 2 nodes to show that **node ≠ process**.
 
 ---
 
-# Learning Objectives
+## Environment
 
-By the end of this investigation, I was able to understand:
-
-- Why monolithic robotic software becomes difficult to maintain.
-- What a Single Point of Failure is.
-- The importance of Fault Isolation.
-- Separation of Concerns.
-- Single Responsibility Principle.
-- Why distributed software architectures are preferred for robotic systems.
-- Why ROS 2 organises robotic applications into independent nodes.
+| | |
+|---|---|
+| OS | Ubuntu 22.04 LTS |
+| ROS 2 | Humble Hawksbill (required for Investigation C) |
+| Default experiment domain (C) | `ROS_DOMAIN_ID=42` |
+| A / B | Plain Python 3 — no ROS required |
 
 ---
 
-# Investigations
+## Learning Objectives
 
-## Investigation A — Monolithic Robot Architecture
-
-**Engineering Question**
-
-> What happens if an entire robotic system is implemented as one program?
-
-### Experiment
-
-A simulated robot consisting of:
-
-- Camera
-- GPS
-- IMU
-- Motor Controller
-
-was implemented inside a single Python application.
-
-A software failure was intentionally introduced into the Camera module.
-
-### Result
-
-The complete application terminated immediately.
-
-This demonstrated the concept of a **Single Point of Failure**, where one software failure causes the entire robotic system to stop.
+- Why monolithic robotic software creates a Single Point of Failure
+- What fault isolation requires (OS process boundaries)
+- Separation of Concerns and Single Responsibility
+- What a ROS 2 node is vs what an OS process is
+- Why ROS 2 allows composition (many nodes, one process)
+- Why “separate node” does not automatically mean “fault isolated”
 
 ---
 
-## Investigation B — Fault Isolation Through Independent Processes
+## Investigations
 
-**Engineering Question**
+### Investigation A — Monolithic Robot Architecture
 
-> Can independent software modules continue operating if one module crashes?
+One Python process runs Camera, GPS, IMU, and Motor. An intentional camera exception terminates the entire application → **Single Point of Failure**.
 
-### Experiment
+Details: [A-monolithic-vs-modular.md](investigations/A-monolithic-vs-modular.md)
 
-The robotic system was divided into four independent daemons:
+### Investigation B — Fault Isolation Through Independent Processes
 
-- Camera Daemon
-- GPS Daemon
-- IMU Daemon
-- Motor Daemon
+The same four subsystems run as four OS processes (daemons). Crashing the camera leaves GPS, IMU, and Motor running → **process-level fault isolation**.
 
-The Camera daemon was intentionally crashed.
+Details: [B-fault-isolation.md](investigations/B-fault-isolation.md)
 
-### Result
+### Investigation C — Node Boundary vs Process Boundary
 
-Only the Camera daemon terminated.
+The same four **ROS 2 nodes** are deployed two ways:
 
-The remaining daemons continued executing normally.
+| Run | Layout | Observed result |
+|---|---|---|
+| **C1** | 4 nodes / 4 processes | Camera exits; other three keep running |
+| **C2** | 4 nodes / 1 process | Camera `RuntimeError` kills the whole container |
 
-This demonstrated the principle of **Fault Isolation**, where failures remain isolated to the affected subsystem.
+Architecture stays modular either way. Only process layout decides who survives.
+
+Details: [C-node-boundary-vs-process-boundary.md](investigations/C-node-boundary-vs-process-boundary.md)
 
 ---
 
-# Repository Structure
+## Reproduction (quick start)
+
+### A — monolith
+
+```bash
+cd day02-modular-node-architecture/daemon
+python3 monolithic_robot.py
+```
+
+### B — daemons (four terminals)
+
+```bash
+cd day02-modular-node-architecture/daemon
+python3 camera_daemon.py   # terminal 1
+python3 gps_daemon.py      # terminal 2
+python3 imu_daemon.py      # terminal 3
+python3 motor_daemon.py    # terminal 4
+```
+
+### C — ROS 2 node vs process
+
+```bash
+source /opt/ros/humble/setup.bash
+export ROS_DOMAIN_ID=42
+cd day02-modular-node-architecture/ros2_nodes
+bash run_investigation_c.sh
+```
+
+Or run C1/C2 manually as documented in Investigation C.
+
+---
+
+## Repository Structure
 
 ```
 day02-modular-node-architecture/
-
 ├── assets/
-│
-├── daemon/
-│   ├── monolithic_robot.py
-│   ├── camera_daemon.py
-│   ├── gps_daemon.py
-│   ├── imu_daemon.py
-│   └── motor_daemon.py
-│
+│   ├── expA_*.png
+│   ├── expB_*.png
+│   ├── expC1_multiprocess_survivors.png
+│   └── expC2_composed_shared_fate.png
+├── daemon/                 # Investigations A & B (plain Python)
+├── ros2_nodes/             # Investigation C (rclpy)
+│   ├── sensor_node.py
+│   ├── composed_container.py
+│   └── run_investigation_c.sh
 ├── investigations/
 │   ├── A-monolithic-vs-modular.md
-│   └── B-fault-isolation.md
-│
+│   ├── B-fault-isolation.md
+│   └── C-node-boundary-vs-process-boundary.md
 ├── interview_questions.md
 ├── references.md
 └── README.md
@@ -113,58 +126,55 @@ day02-modular-node-architecture/
 
 ---
 
-# Screenshots
+## Screenshots / Evidence
 
-## Investigation A
+### Investigation A
 
-- Monolithic Robot Running
-- Monolithic Robot Crash
+- Monolith running · Monolith crash
 
-## Investigation B
+### Investigation B
 
-- All Daemons Running
-- Camera Daemon Crash While Other Daemons Continue
+- All daemons running · Camera crashed, others alive
+
+### Investigation C
+
+- [C1 survivors](assets/expC1_multiprocess_survivors.png) — camera `Exit 1`, others still `Running`
+- [C2 shared fate](assets/expC2_composed_shared_fate.png) — one PID; camera fault ends the process
 
 ---
 
-# Key Engineering Concepts
+## Key Engineering Concepts
 
-- Monolithic Architecture
-- Modular Architecture
-- Distributed Software Systems
-- Single Responsibility Principle
-- Separation of Concerns
-- Fault Isolation
+- Monolithic vs modular architecture
 - Single Point of Failure
-- Process Isolation
-- Maintainability
-- Scalability
+- Fault isolation (process boundary)
+- ROS 2 nodes (responsibility / graph participants)
+- Composition (deploy-time process layout)
+- Separation of Concerns / Single Responsibility
 
 ---
 
-# Key Takeaways
+## Engineering Conclusion
 
-- One large robotic application creates a Single Point of Failure.
-- Independent software modules improve system reliability.
-- Process isolation prevents one software failure from affecting unrelated components.
-- Modular software is easier to maintain, debug, and extend.
-- ROS 2 adopts this software architecture by organising robotic systems into independent nodes.
+**Should every sensor be a separate ROS 2 node?**
 
----
+**Yes, in general — as nodes.** Separate nodes give clean interfaces, independent testing, and the option to isolate later.
 
-# Real Robotics Connection
+**Fault isolation is not automatic.** It comes from **OS processes**, not from the node abstraction alone. Composition keeps node modularity while deliberately sharing fate for performance.
 
-Modern robotic systems—including autonomous mobile robots, drones, industrial manipulators, and autonomous vehicles—are rarely implemented as one large application.
-
-Instead, perception, localization, planning, navigation, control, diagnostics, and hardware interfaces execute as independent software modules.
-
-ROS 2 formalises this architecture through nodes, allowing robotic systems to remain modular, scalable, and fault tolerant.
+Investigation B showed isolation. Investigation C showed *why*: the process boundary, not the word “node.”
 
 ---
 
-# References
+## Real Robotics Connection
 
-See **references.md**
+Perception pipelines are often composed for large-message efficiency. Drivers and safety-critical control usually keep separate processes. Drawing four boxes on an architecture diagram does not tell you whether a camera crash takes down motor control — asking how many processes does.
+
+---
+
+## References
+
+See [references.md](references.md)
 
 ---
 
@@ -174,4 +184,4 @@ See **references.md**
 
 > **What happens when sensor data is published faster than a robot can process it?**
 
-We'll investigate how independent ROS 2 nodes exchange information using publishers, subscribers, topics, and message queues.
+Topics, publishers, subscribers, and backpressure.

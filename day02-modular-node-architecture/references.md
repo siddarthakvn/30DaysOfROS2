@@ -1,97 +1,86 @@
 # References
 
-The following resources were used to understand the software engineering principles and ROS 2 concepts explored in this investigation.
+Primary sources and supporting material for Day 02 (nodes, modular architecture, fault isolation).
 
 ---
 
-## ROS 2 Documentation
+## ROS 2 Documentation (primary)
 
-- ROS 2 Concepts
-- Understanding Nodes
-- ROS 2 Architecture
+- [About Nodes (Humble)](https://docs.ros.org/en/humble/Concepts/Basic/About-Nodes.html) — what a node is in the ROS graph
+- [About Composition (Humble)](https://docs.ros.org/en/humble/Concepts/Intermediate/About-Composition.html) — process layout as a deploy-time choice; separate processes for process/fault isolation vs single process for lower overhead
+- [ROS 2 Concepts overview (Humble)](https://docs.ros.org/en/humble/)
 
-https://docs.ros.org/en/humble/
+Composition docs explicitly separate:
+
+- multiple nodes in **separate processes** → process/fault isolation, easier per-node debugging
+- multiple nodes in a **single process** → lower overhead, optional intra-process communication
 
 ---
 
 ## Software Engineering
 
-Robert C. Martin
-
-**Clean Architecture: A Craftsman's Guide to Software Structure and Design**
-
-Key concepts referenced:
+Robert C. Martin — *Clean Architecture*
 
 - Single Responsibility Principle
 - Separation of Concerns
-- Modular Software Design
+- Modular software design
 
 ---
 
 ## Operating Systems
 
-Abraham Silberschatz
+Abraham Silberschatz — *Operating System Concepts*
 
-**Operating System Concepts**
-
-Relevant topics:
-
-- Processes
-- Process Isolation
-- Independent Execution
-- Fault Isolation
+- Processes and address spaces
+- Process isolation
+- Independent failure domains
 
 ---
 
 ## Distributed Systems
 
-Andrew S. Tanenbaum
+Andrew S. Tanenbaum — *Distributed Systems: Principles and Paradigms*
 
-**Distributed Systems: Principles and Paradigms**
-
-Relevant concepts:
-
-- Distributed Architecture
-- Independent Components
-- Reliability
-- Scalability
+- Independent components
+- Reliability and partial failure
 
 ---
 
 ## Robotics Software Engineering
 
-Morgan Quigley, Brian Gerkey, William D. Smart
+Morgan Quigley, Brian Gerkey, William D. Smart — *Programming Robots with ROS*
 
-**Programming Robots with ROS**
-
-Referenced concepts:
-
-- Modular Robot Software
-- Distributed Robotics
-- Software Components
+- Modular robot software
+- Distributed robotics components
 
 ---
 
 ## Experiments Performed
 
-Investigation A
+### Investigation A
 
-- Simulated a monolithic robotic application.
-- Introduced an intentional software failure.
-- Observed complete application termination.
+- Monolithic Python robot (Camera, GPS, IMU, Motor)
+- Intentional camera exception → full application termination
+- Evidence: `assets/expA_*.png`
 
----
+### Investigation B
 
-Investigation B
+- Four independent daemon processes
+- Camera crash → GPS/IMU/Motor continued
+- Evidence: `assets/expB_*.png`
 
-- Divided the robotic system into independent daemons.
-- Introduced an intentional Camera daemon failure.
-- Observed that unrelated daemons continued executing.
+### Investigation C
+
+- Same four `rclpy` nodes; only process count changed
+- **C1** (4 processes): camera exited; others survived
+- **C2** (1 composed process): camera `RuntimeError` killed all
+- Evidence: `assets/expC1_multiprocess_survivors.png`, `assets/expC2_composed_shared_fate.png`
+- Note: C2 uses a Python shared executor as a teaching stand-in for multi-node-in-one-process; not a full C++ `ComposableNodeContainer` demo
 
 ---
 
 ## Notes
 
-This investigation intentionally focused on software architecture rather than ROS communication.
-
-Topics, publishers, subscribers, and message passing will be explored in **Day 03**.
+- A and B intentionally use plain Python so process isolation is visible without ROS APIs.
+- C is required to answer the curriculum question about **nodes** without conflating them with processes.
+- Topics / backpressure are Day 03.
