@@ -1,0 +1,5 @@
+=== RMW PIN ===
+rmw_fastrtps_cpp                          : latest=6.2.10, local=6.2.10
+rmw_fastrtps_shared_cpp                   : latest=6.2.10, local=6.2.10
+   RMW MIDDLEWARE
+middleware name    : rmw_fastrtps_cpp

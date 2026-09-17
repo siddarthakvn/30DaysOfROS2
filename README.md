@@ -85,7 +85,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [01](day01-distributed-discovery/) | How do ROS 2 nodes find each other without a ROS Master? | ROS 2 architecture, DDS, RMW, discovery, ROS graph | ✅ |
 | [02](day02-modular-node-architecture/) | Should every sensor be a separate ROS 2 node? | Nodes, modular architecture, fault isolation | ✅ |
 | 03 | What happens when sensor data is published faster than a robot can process it? | Topics, publishers, subscribers, queues | |
-| 04 | When should a robot use a Topic, Service, or Action? | ROS 2 communication patterns | |
+| [04](day04-communication-patterns/) | When should a robot use a Topic, Service, or Action? | ROS 2 communication patterns | |
 | 05 | How does a robot cancel a task while it is still executing? | Actions, goals, feedback, cancellation | |
 | 06 | How do robots communicate data that standard ROS messages cannot represent? | Custom `.msg`, `.srv`, `.action` interfaces | |
 | 07 | Can the wrong QoS policy silently break a robotic system? | DDS QoS, reliability, durability, history, depth | |
