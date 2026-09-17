@@ -1,0 +1,613 @@
+=== C0 ACTION TO COMPLETION ===
+Action: /turtle1/rotate_absolute
+Action clients: 0
+Action servers: 1
+    /turtlesim
+Waiting for an action server to become available...
+Sending goal:
+     theta: 3.14
+
+Goal accepted with ID: e83dede0c99a4994a10c9d86129f4fe9
+
+Feedback:
+    remaining: 3.140000104904175
+
+Feedback:
+    remaining: 3.124000072479248
+
+Feedback:
+    remaining: 3.1080000400543213
+
+Feedback:
+    remaining: 3.0920000076293945
+
+Feedback:
+    remaining: 3.076000213623047
+
+Feedback:
+    remaining: 3.06000018119812
+
+Feedback:
+    remaining: 3.0440001487731934
+
+Feedback:
+    remaining: 3.0280001163482666
+
+Feedback:
+    remaining: 3.01200008392334
+
+Feedback:
+    remaining: 2.996000051498413
+
+Feedback:
+    remaining: 2.9800000190734863
+
+Feedback:
+    remaining: 2.9640002250671387
+
+Feedback:
+    remaining: 2.948000192642212
+
+Feedback:
+    remaining: 2.932000160217285
+
+Feedback:
+    remaining: 2.9160001277923584
+
+Feedback:
+    remaining: 2.9000000953674316
+
+Feedback:
+    remaining: 2.884000062942505
+
+Feedback:
+    remaining: 2.868000030517578
+
+Feedback:
+    remaining: 2.8520002365112305
+
+Feedback:
+    remaining: 2.8360002040863037
+
+Feedback:
+    remaining: 2.820000171661377
+
+Feedback:
+    remaining: 2.80400013923645
+
+Feedback:
+    remaining: 2.7880001068115234
+
+Feedback:
+    remaining: 2.7720000743865967
+
+Feedback:
+    remaining: 2.75600004196167
+
+Feedback:
+    remaining: 2.740000009536743
+
+Feedback:
+    remaining: 2.7239999771118164
+
+Feedback:
+    remaining: 2.7080001831054688
+
+Feedback:
+    remaining: 2.692000150680542
+
+Feedback:
+    remaining: 2.6760001182556152
+
+Feedback:
+    remaining: 2.6600000858306885
+
+Feedback:
+    remaining: 2.6440000534057617
+
+Feedback:
+    remaining: 2.628000020980835
+
+Feedback:
+    remaining: 2.611999988555908
+
+Feedback:
+    remaining: 2.5960001945495605
+
+Feedback:
+    remaining: 2.580000162124634
+
+Feedback:
+    remaining: 2.564000129699707
+
+Feedback:
+    remaining: 2.5480000972747803
+
+Feedback:
+    remaining: 2.5320000648498535
+
+Feedback:
+    remaining: 2.5160000324249268
+
+Feedback:
+    remaining: 2.5
+
+Feedback:
+    remaining: 2.4840002059936523
+
+Feedback:
+    remaining: 2.4680001735687256
+
+Feedback:
+    remaining: 2.452000141143799
+
+Feedback:
+    remaining: 2.436000108718872
+
+Feedback:
+    remaining: 2.4200000762939453
+
+Feedback:
+    remaining: 2.4040000438690186
+
+Feedback:
+    remaining: 2.388000011444092
+
+Feedback:
+    remaining: 2.372000217437744
+
+Feedback:
+    remaining: 2.3560001850128174
+
+Feedback:
+    remaining: 2.3400001525878906
+
+Feedback:
+    remaining: 2.324000120162964
+
+Feedback:
+    remaining: 2.308000087738037
+
+Feedback:
+    remaining: 2.2920000553131104
+
+Feedback:
+    remaining: 2.2760000228881836
+
+Feedback:
+    remaining: 2.260000228881836
+
+Feedback:
+    remaining: 2.24399995803833
+
+Feedback:
+    remaining: 2.2280001640319824
+
+Feedback:
+    remaining: 2.2120001316070557
+
+Feedback:
+    remaining: 2.196000099182129
+
+Feedback:
+    remaining: 2.180000066757202
+
+Feedback:
+    remaining: 2.1640000343322754
+
+Feedback:
+    remaining: 2.1480002403259277
+
+Feedback:
+    remaining: 2.131999969482422
+
+Feedback:
+    remaining: 2.116000175476074
+
+Feedback:
+    remaining: 2.1000001430511475
+
+Feedback:
+    remaining: 2.0840001106262207
+
+Feedback:
+    remaining: 2.068000078201294
+
+Feedback:
+    remaining: 2.052000045776367
+
+Feedback:
+    remaining: 2.0360002517700195
+
+Feedback:
+    remaining: 2.0199999809265137
+
+Feedback:
+    remaining: 2.004000186920166
+
+Feedback:
+    remaining: 1.9880001544952393
+
+Feedback:
+    remaining: 1.9720001220703125
+
+Feedback:
+    remaining: 1.9560000896453857
+
+Feedback:
+    remaining: 1.940000057220459
+
+Feedback:
+    remaining: 1.9240001440048218
+
+Feedback:
+    remaining: 1.908000111579895
+
+Feedback:
+    remaining: 1.8920000791549683
+
+Feedback:
+    remaining: 1.8760000467300415
+
+Feedback:
+    remaining: 1.8600001335144043
+
+Feedback:
+    remaining: 1.8440001010894775
+
+Feedback:
+    remaining: 1.8280000686645508
+
+Feedback:
+    remaining: 1.8120001554489136
+
+Feedback:
+    remaining: 1.7960001230239868
+
+Feedback:
+    remaining: 1.78000009059906
+
+Feedback:
+    remaining: 1.7640000581741333
+
+Feedback:
+    remaining: 1.748000144958496
+
+Feedback:
+    remaining: 1.7320001125335693
+
+Feedback:
+    remaining: 1.7160000801086426
+
+Feedback:
+    remaining: 1.7000000476837158
+
+Feedback:
+    remaining: 1.6840001344680786
+
+Feedback:
+    remaining: 1.6680001020431519
+
+Feedback:
+    remaining: 1.652000069618225
+
+Feedback:
+    remaining: 1.636000156402588
+
+Feedback:
+    remaining: 1.6200001239776611
+
+Feedback:
+    remaining: 1.6040000915527344
+
+Feedback:
+    remaining: 1.5880000591278076
+
+Feedback:
+    remaining: 1.5720001459121704
+
+Feedback:
+    remaining: 1.5560001134872437
+
+Feedback:
+    remaining: 1.540000081062317
+
+Feedback:
+    remaining: 1.5240000486373901
+
+Feedback:
+    remaining: 1.508000135421753
+
+Feedback:
+    remaining: 1.4920001029968262
+
+Feedback:
+    remaining: 1.4760000705718994
+
+Feedback:
+    remaining: 1.4600001573562622
+
+Feedback:
+    remaining: 1.4440001249313354
+
+Feedback:
+    remaining: 1.4280000925064087
+
+Feedback:
+    remaining: 1.412000060081482
+
+Feedback:
+    remaining: 1.3960001468658447
+
+Feedback:
+    remaining: 1.380000114440918
+
+Feedback:
+    remaining: 1.3640000820159912
+
+Feedback:
+    remaining: 1.3480000495910645
+
+Feedback:
+    remaining: 1.3320001363754272
+
+Feedback:
+    remaining: 1.3160001039505005
+
+Feedback:
+    remaining: 1.3000000715255737
+
+Feedback:
+    remaining: 1.2840001583099365
+
+Feedback:
+    remaining: 1.2680001258850098
+
+Feedback:
+    remaining: 1.252000093460083
+
+Feedback:
+    remaining: 1.2360000610351562
+
+Feedback:
+    remaining: 1.220000147819519
+
+Feedback:
+    remaining: 1.2040001153945923
+
+Feedback:
+    remaining: 1.1880000829696655
+
+Feedback:
+    remaining: 1.1720000505447388
+
+Feedback:
+    remaining: 1.1560001373291016
+
+Feedback:
+    remaining: 1.1400001049041748
+
+Feedback:
+    remaining: 1.124000072479248
+
+Feedback:
+    remaining: 1.1080000400543213
+
+Feedback:
+    remaining: 1.0920000076293945
+
+Feedback:
+    remaining: 1.0760002136230469
+
+Feedback:
+    remaining: 1.0600001811981201
+
+Feedback:
+    remaining: 1.0440001487731934
+
+Feedback:
+    remaining: 1.0280001163482666
+
+Feedback:
+    remaining: 1.0120000839233398
+
+Feedback:
+    remaining: 0.9960000514984131
+
+Feedback:
+    remaining: 0.9800000190734863
+
+Feedback:
+    remaining: 0.9639999866485596
+
+Feedback:
+    remaining: 0.9480001926422119
+
+Feedback:
+    remaining: 0.9320001602172852
+
+Feedback:
+    remaining: 0.9160001277923584
+
+Feedback:
+    remaining: 0.9000000953674316
+
+Feedback:
+    remaining: 0.8840000629425049
+
+Feedback:
+    remaining: 0.8680000305175781
+
+Feedback:
+    remaining: 0.8519999980926514
+
+Feedback:
+    remaining: 0.8360002040863037
+
+Feedback:
+    remaining: 0.820000171661377
+
+Feedback:
+    remaining: 0.8040001392364502
+
+Feedback:
+    remaining: 0.7880001068115234
+
+Feedback:
+    remaining: 0.7720000743865967
+
+Feedback:
+    remaining: 0.7560000419616699
+
+Feedback:
+    remaining: 0.7400000095367432
+
+Feedback:
+    remaining: 0.7240002155303955
+
+Feedback:
+    remaining: 0.7080001831054688
+
+Feedback:
+    remaining: 0.692000150680542
+
+Feedback:
+    remaining: 0.6760001182556152
+
+Feedback:
+    remaining: 0.6600000858306885
+
+Feedback:
+    remaining: 0.6440000534057617
+
+Feedback:
+    remaining: 0.628000020980835
+
+Feedback:
+    remaining: 0.6119999885559082
+
+Feedback:
+    remaining: 0.5960001945495605
+
+Feedback:
+    remaining: 0.5800001621246338
+
+Feedback:
+    remaining: 0.564000129699707
+
+Feedback:
+    remaining: 0.5480000972747803
+
+Feedback:
+    remaining: 0.5320000648498535
+
+Feedback:
+    remaining: 0.5160000324249268
+
+Feedback:
+    remaining: 0.5
+
+Feedback:
+    remaining: 0.48400020599365234
+
+Feedback:
+    remaining: 0.4680001735687256
+
+Feedback:
+    remaining: 0.45200014114379883
+
+Feedback:
+    remaining: 0.43600010871887207
+
+Feedback:
+    remaining: 0.4200000762939453
+
+Feedback:
+    remaining: 0.40400004386901855
+
+Feedback:
+    remaining: 0.3880000114440918
+
+Feedback:
+    remaining: 0.37200021743774414
+
+Feedback:
+    remaining: 0.3560001850128174
+
+Feedback:
+    remaining: 0.3400001525878906
+
+Feedback:
+    remaining: 0.32400012016296387
+
+Feedback:
+    remaining: 0.3080000877380371
+
+Feedback:
+    remaining: 0.29200005531311035
+
+Feedback:
+    remaining: 0.2760000228881836
+
+Feedback:
+    remaining: 0.25999999046325684
+
+Feedback:
+    remaining: 0.24400019645690918
+
+Feedback:
+    remaining: 0.22800016403198242
+
+Feedback:
+    remaining: 0.21200013160705566
+
+Feedback:
+    remaining: 0.1960000991821289
+
+Feedback:
+    remaining: 0.18000006675720215
+
+Feedback:
+    remaining: 0.1640000343322754
+
+Feedback:
+    remaining: 0.14800000190734863
+
+Feedback:
+    remaining: 0.13200020790100098
+
+Feedback:
+    remaining: 0.11600017547607422
+
+Feedback:
+    remaining: 0.10000014305114746
+
+Feedback:
+    remaining: 0.0840001106262207
+
+Feedback:
+    remaining: 0.06800007820129395
+
+Feedback:
+    remaining: 0.05200004577636719
+
+Feedback:
+    remaining: 0.03600001335144043
+
+Feedback:
+    remaining: 0.020000219345092773
+
+Feedback:
+    remaining: 0.004000186920166016
+
+Result:
+    delta: -3.135999917984009
+
+Goal finished with status: SUCCEEDED
+=== POSE AFTER C0 ===
+x: 5.5
+y: 5.5
+theta: 3.135999917984009
+linear_velocity: 0.0
+angular_velocity: 0.0
+---

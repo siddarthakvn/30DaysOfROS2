@@ -1,0 +1,23 @@
+=== A1 START ===
+[0m[INFO] [1789580341.687838957] [cmd_vel_burst]: Topic burst on /turtle1/cmd_vel | hz=20.0 angular_z=1.00 active_for=2.00s (planned_duration=5.00s) send_zero_on_exit=False[0m
+[0m[INFO] [1789580341.729099701] [cmd_vel_burst]: PUB n=1 elapsed=0.05s angular_z=1.00[0m
+[0m[INFO] [1789580342.679806891] [cmd_vel_burst]: PUB n=20 elapsed=1.00s angular_z=1.00[0m
+[33m[WARN] [1789580343.679192690] [cmd_vel_burst]: Exiting WITHOUT zero Twist — stop publishing ≠ Action cancel[0m
+[0m[INFO] [1789580343.679847857] [cmd_vel_burst]: DONE published=39 elapsed=2.00s[0m
+=== POSE IMMEDIATELY AFTER PUBLISHER EXIT ===
+x: 5.5
+y: 5.5
+theta: 2.9119999408721924
+linear_velocity: 0.0
+angular_velocity: 1.0
+---
+=== POSE +1.5s LATER (no more cmd_vel) ===
+x: 5.5
+y: 5.5
+theta: 2.9119999408721924
+linear_velocity: 0.0
+angular_velocity: 0.0
+---
+=== NO ACTION LIFECYCLE FOR THIS MOTION ===
+/turtle1/rotate_absolute
+(cmd_vel burst is NOT an action goal — only rotate_absolute exists)

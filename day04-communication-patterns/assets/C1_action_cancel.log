@@ -1,0 +1,24 @@
+=== C1 action_cancel_demo ===
+[0m[INFO] [1789580471.143209489] [action_cancel_demo]: Waiting for action /turtle1/rotate_absolute ...[0m
+[0m[INFO] [1789580471.143520888] [action_cancel_demo]: Sending goal theta=3.140; will cancel after 1.00s[0m
+[0m[INFO] [1789580471.160729471] [action_cancel_demo]: Goal accepted id=unique_identifier_msgs.msg.UUID(uuid=array([176, 209,  81, 185,  26,  51,  71, 173, 139, 148, 151, 184, 112,
+        13, 167,  82], dtype=uint8))[0m
+[0m[INFO] [1789580471.161302539] [action_cancel_demo]: Feedback n=1 remaining=3.1400[0m
+[0m[INFO] [1789580471.305104400] [action_cancel_demo]: Feedback n=10 remaining=2.9960[0m
+[0m[INFO] [1789580471.464919980] [action_cancel_demo]: Feedback n=20 remaining=2.8360[0m
+[0m[INFO] [1789580471.624377049] [action_cancel_demo]: Feedback n=30 remaining=2.6760[0m
+[0m[INFO] [1789580471.783732449] [action_cancel_demo]: Feedback n=40 remaining=2.5160[0m
+[0m[INFO] [1789580471.944339624] [action_cancel_demo]: Feedback n=50 remaining=2.3560[0m
+[0m[INFO] [1789580472.104332633] [action_cancel_demo]: Feedback n=60 remaining=2.1960[0m
+[33m[WARN] [1789580472.168178284] [action_cancel_demo]: Requesting CANCEL now[0m
+[0m[INFO] [1789580472.184982453] [action_cancel_demo]: Cancel response: action_msgs.srv.CancelGoal_Response(return_code=0, goals_canceling=[action_msgs.msg.GoalInfo(goal_id=unique_identifier_msgs.msg.UUID(uuid=array([176, 209,  81, 185,  26,  51,  71, 173, 139, 148, 151, 184, 112,
+        13, 167,  82], dtype=uint8)), stamp=builtin_interfaces.msg.Time(sec=1789580471, nanosec=159651427))])[0m
+[0m[INFO] [1789580472.186181958] [action_cancel_demo]: Terminal status=CANCELED (5) delta=-1.0080 feedback_msgs=64[0m
+FINAL_STATUS=CANCELED
+=== POSE AFTER C1 ===
+x: 5.5
+y: 5.5
+theta: 1.0240000486373901
+linear_velocity: 0.0
+angular_velocity: 0.0
+---

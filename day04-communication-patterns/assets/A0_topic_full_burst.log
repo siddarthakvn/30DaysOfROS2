@@ -1,0 +1,16 @@
+=== A0 START ===
+[0m[INFO] [1789580325.339435821] [cmd_vel_burst]: Topic burst on /turtle1/cmd_vel | hz=20.0 angular_z=1.00 active_for=5.00s (planned_duration=5.00s) send_zero_on_exit=True[0m
+[0m[INFO] [1789580325.380694841] [cmd_vel_burst]: PUB n=1 elapsed=0.05s angular_z=1.00[0m
+[0m[INFO] [1789580326.330659633] [cmd_vel_burst]: PUB n=20 elapsed=1.00s angular_z=1.00[0m
+[0m[INFO] [1789580327.330416969] [cmd_vel_burst]: PUB n=40 elapsed=2.00s angular_z=1.00[0m
+[0m[INFO] [1789580328.330829062] [cmd_vel_burst]: PUB n=60 elapsed=3.00s angular_z=1.00[0m
+[0m[INFO] [1789580329.330966375] [cmd_vel_burst]: PUB n=80 elapsed=4.00s angular_z=1.00[0m
+[0m[INFO] [1789580330.330494989] [cmd_vel_burst]: Published zero Twist on exit[0m
+[0m[INFO] [1789580330.330995100] [cmd_vel_burst]: DONE published=99 elapsed=5.00s[0m
+=== POSE AFTER A0 ===
+x: 5.544444561004639
+y: 5.544444561004639
+theta: -1.3231853246688843
+linear_velocity: 0.0
+angular_velocity: 0.0
+---

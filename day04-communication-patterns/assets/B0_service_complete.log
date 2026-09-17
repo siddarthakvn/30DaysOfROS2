@@ -1,0 +1,14 @@
+=== B0 CLIENT ===
+[0m[INFO] [1789580368.234012443] [long_rotate_client]: Waiting for service /long_rotate ...[0m
+[0m[INFO] [1789580368.234286378] [long_rotate_client]: Calling long_rotate — will block for ONE response (Ctrl+C cancels THIS client only, not the server work)[0m
+[0m[INFO] [1789580373.269766762] [long_rotate_client]: RESPONSE success=True message='finished after 5.03s published=100 (single response only)'[0m
+=== SERVER TAIL ===
+[0m[INFO] [1789580360.294157517] [long_rotate_server]: Service ready: ~/long_rotate (std_srvs/Trigger) | duration_sec=5.0 angular_z=1.00 on /turtle1/cmd_vel — ANTI-PATTERN for long preemptable work[0m
+[0m[INFO] [1789580368.234873084] [long_rotate_server]: SERVICE START duration=5.0s (blocking callback — no feedback, no cancel)[0m
+[0m[INFO] [1789580368.235196655] [long_rotate_server]: SPIN n=1 elapsed=0.00s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580369.191147294] [long_rotate_server]: SPIN n=20 elapsed=0.96s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580370.197410459] [long_rotate_server]: SPIN n=40 elapsed=1.96s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580371.204177730] [long_rotate_server]: SPIN n=60 elapsed=2.97s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580372.210681777] [long_rotate_server]: SPIN n=80 elapsed=3.98s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580373.217389026] [long_rotate_server]: SPIN n=100 elapsed=4.98s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580373.268229367] [long_rotate_server]: SERVICE DONE finished after 5.03s published=100 (single response only)[0m

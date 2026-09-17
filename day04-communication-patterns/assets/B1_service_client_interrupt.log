@@ -1,0 +1,33 @@
+=== B1: start client, SIGINT after ~2s ===
+[0m[INFO] [1789580383.155796207] [long_rotate_client]: Waiting for service /long_rotate ...[0m
+[0m[INFO] [1789580383.156081223] [long_rotate_client]: Calling long_rotate — will block for ONE response (Ctrl+C cancels THIS client only, not the server work)[0m
+=== sending SIGINT to client pid=15958 at 23:09:44 ===
+[33m[WARN] [1789580384.584248427] [long_rotate_client]: Client interrupted — server may STILL be rotating (no cancel protocol)[0m
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+=== CLIENT EXIT STATUS ===
+wait_code=0
+=== SERVER LOG DURING/AFTER CLIENT KILL ===
+[0m[INFO] [1789580360.294157517] [long_rotate_server]: Service ready: ~/long_rotate (std_srvs/Trigger) | duration_sec=5.0 angular_z=1.00 on /turtle1/cmd_vel — ANTI-PATTERN for long preemptable work[0m
+[0m[INFO] [1789580368.234873084] [long_rotate_server]: SERVICE START duration=5.0s (blocking callback — no feedback, no cancel)[0m
+[0m[INFO] [1789580368.235196655] [long_rotate_server]: SPIN n=1 elapsed=0.00s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580369.191147294] [long_rotate_server]: SPIN n=20 elapsed=0.96s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580370.197410459] [long_rotate_server]: SPIN n=40 elapsed=1.96s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580371.204177730] [long_rotate_server]: SPIN n=60 elapsed=2.97s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580372.210681777] [long_rotate_server]: SPIN n=80 elapsed=3.98s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580373.217389026] [long_rotate_server]: SPIN n=100 elapsed=4.98s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580373.268229367] [long_rotate_server]: SERVICE DONE finished after 5.03s published=100 (single response only)[0m
+[0m[INFO] [1789580383.156635554] [long_rotate_server]: SERVICE START duration=5.0s (blocking callback — no feedback, no cancel)[0m
+[0m[INFO] [1789580383.156926194] [long_rotate_server]: SPIN n=1 elapsed=0.00s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580384.113758348] [long_rotate_server]: SPIN n=20 elapsed=0.96s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580385.121068414] [long_rotate_server]: SPIN n=40 elapsed=1.96s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580386.128390802] [long_rotate_server]: SPIN n=60 elapsed=2.97s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580387.146358334] [long_rotate_server]: SPIN n=80 elapsed=3.99s (client still waiting for ONE response)[0m
+[0m[INFO] [1789580388.158163154] [long_rotate_server]: SERVICE DONE finished after 5.00s published=99 (single response only)[0m
+=== POSE AFTER B1 WINDOW ===
+x: 5.5
+y: 5.5
+theta: -1.2751853466033936
+linear_velocity: 0.0
+angular_velocity: 0.0
+---
+=== B1b concurrent call while busy (if still busy) ===
