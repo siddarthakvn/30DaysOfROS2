@@ -1,0 +1,5 @@
+[INFO] [delivery_server]: Delivery server ready on 'deliver_to_station' (allow_cancel=False, speed=1.0 m/s)
+[INFO] [delivery_server]: Accepting delivery goal distance_m=10.00 (warehouse aisle toward Station B)
+[INFO] [delivery_server]: EXECUTING delivery: 10.00 m at 1.00 m/s
+[WARN] [delivery_server]: Operator STOP rejected — allow_cancel=false; delivery continues
+[INFO] [delivery_server]: SUCCEEDED delivery: traveled=10.00 m — arrived Station B

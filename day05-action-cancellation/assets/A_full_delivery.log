@@ -1,0 +1,24 @@
+ROS_DOMAIN_ID=45
+RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+DAY05_ROOT=/home/kvn/30-days-ros2/day05-action-cancellation
+cwd=/home/kvn/30-days-ros2/day05-action-cancellation/ros2_nodes
+=== Investigation A: full delivery distance_m=10.0 ===
+Terminal 1 must already be running:
+  ros2 run day05_delivery_bringup delivery_server --ros-args -p allow_cancel:=true
+
+[0m[INFO] [1789752315.016469052] [delivery_client]: Waiting for action 'deliver_to_station' ...[0m
+[0m[INFO] [1789752315.016794935] [delivery_client]: Sending delivery goal distance_m=10.00; no cancel scheduled (run to completion)[0m
+[0m[INFO] [1789752315.021807027] [delivery_client]: Goal accepted id=d7afce141ff94b0ba15bf60d61258549[0m
+[0m[INFO] [1789752315.022656202] [delivery_client]: Feedback n=1 remaining=9.800 m percent=2.0%[0m
+[0m[INFO] [1789752315.824546753] [delivery_client]: Feedback n=5 remaining=9.000 m percent=10.0%[0m
+[0m[INFO] [1789752316.827105762] [delivery_client]: Feedback n=10 remaining=8.000 m percent=20.0%[0m
+[0m[INFO] [1789752317.828862263] [delivery_client]: Feedback n=15 remaining=7.000 m percent=30.0%[0m
+[0m[INFO] [1789752318.831306898] [delivery_client]: Feedback n=20 remaining=6.000 m percent=40.0%[0m
+[0m[INFO] [1789752319.833220194] [delivery_client]: Feedback n=25 remaining=5.000 m percent=50.0%[0m
+[0m[INFO] [1789752320.835232616] [delivery_client]: Feedback n=30 remaining=4.000 m percent=60.0%[0m
+[0m[INFO] [1789752321.836791630] [delivery_client]: Feedback n=35 remaining=3.000 m percent=70.0%[0m
+[0m[INFO] [1789752322.839128763] [delivery_client]: Feedback n=40 remaining=2.000 m percent=80.0%[0m
+[0m[INFO] [1789752323.841260105] [delivery_client]: Feedback n=45 remaining=1.000 m percent=90.0%[0m
+[0m[INFO] [1789752324.842631275] [delivery_client]: Feedback n=50 remaining=0.000 m percent=100.0%[0m
+[0m[INFO] [1789752325.244815918] [delivery_client]: Terminal status=SUCCEEDED (4) traveled=10.000 m remaining=0.000 m feedback_msgs=51[0m
+FINAL_STATUS=SUCCEEDED traveled=10.000 remaining=0.000 feedback=51

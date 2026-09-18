@@ -1,0 +1,8 @@
+[0m[INFO] [1789752234.794282496] [delivery_server]: Delivery server ready on 'deliver_to_station' (allow_cancel=True, speed=1.0 m/s)[0m
+[0m[INFO] [1789752315.020962513] [delivery_server]: Accepting delivery goal distance_m=10.00 (warehouse aisle toward Station B)[0m
+[0m[INFO] [1789752315.022186688] [delivery_server]: EXECUTING delivery: 10.00 m at 1.00 m/s[0m
+[0m[INFO] [1789752325.243482788] [delivery_server]: SUCCEEDED delivery: traveled=10.00 m — arrived Station B[0m
+[0m[INFO] [1789752334.191523324] [delivery_server]: Accepting delivery goal distance_m=10.00 (warehouse aisle toward Station B)[0m
+[0m[INFO] [1789752334.192542050] [delivery_server]: EXECUTING delivery: 10.00 m at 1.00 m/s[0m
+[33m[WARN] [1789752336.198599304] [delivery_server]: Operator STOP accepted — transitioning goal toward CANCELING[0m
+[0m[INFO] [1789752336.397042377] [delivery_server]: CANCELED after 2.20 m (remaining=7.80 m) — robot stopped cleanly[0m

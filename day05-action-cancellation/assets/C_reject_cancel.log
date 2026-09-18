@@ -1,0 +1,26 @@
+ROS_DOMAIN_ID=45
+RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+DAY05_ROOT=/home/kvn/30-days-ros2/day05-action-cancellation
+cwd=/home/kvn/30-days-ros2/day05-action-cancellation/ros2_nodes
+=== Investigation C: STOP after 2.0s (allow_cancel=false) ===
+Terminal 1 must already be running WITH reject-cancel policy:
+  ros2 run day05_delivery_bringup delivery_server --ros-args -p allow_cancel:=false
+
+[0m[INFO] [1789752403.185493448] [delivery_client]: Waiting for action 'deliver_to_station' ...[0m
+[0m[INFO] [1789752403.185819973] [delivery_client]: Sending delivery goal distance_m=10.00; supervisor will STOP after 2.00s[0m
+[0m[INFO] [1789752403.188675486] [delivery_client]: Goal accepted id=85cecb2f0c73430e82766140c5dd064d[0m
+[0m[INFO] [1789752403.190332353] [delivery_client]: Feedback n=1 remaining=9.800 m percent=2.0%[0m
+[0m[INFO] [1789752403.992132603] [delivery_client]: Feedback n=5 remaining=9.000 m percent=10.0%[0m
+[0m[INFO] [1789752404.995389462] [delivery_client]: Feedback n=10 remaining=8.000 m percent=20.0%[0m
+[33m[WARN] [1789752405.195499598] [delivery_client]: Requesting CANCEL now (supervisor STOP)[0m
+[0m[INFO] [1789752405.199297773] [delivery_client]: Cancel response: return_code=0 goals_canceling=0[0m
+[0m[INFO] [1789752405.996949002] [delivery_client]: Feedback n=15 remaining=7.000 m percent=30.0%[0m
+[0m[INFO] [1789752406.999286732] [delivery_client]: Feedback n=20 remaining=6.000 m percent=40.0%[0m
+[0m[INFO] [1789752408.002130587] [delivery_client]: Feedback n=25 remaining=5.000 m percent=50.0%[0m
+[0m[INFO] [1789752409.003688513] [delivery_client]: Feedback n=30 remaining=4.000 m percent=60.0%[0m
+[0m[INFO] [1789752410.005657066] [delivery_client]: Feedback n=35 remaining=3.000 m percent=70.0%[0m
+[0m[INFO] [1789752411.008155682] [delivery_client]: Feedback n=40 remaining=2.000 m percent=80.0%[0m
+[0m[INFO] [1789752412.010061045] [delivery_client]: Feedback n=45 remaining=1.000 m percent=90.0%[0m
+[0m[INFO] [1789752413.012380475] [delivery_client]: Feedback n=50 remaining=0.000 m percent=100.0%[0m
+[0m[INFO] [1789752413.414141055] [delivery_client]: Terminal status=SUCCEEDED (4) traveled=10.000 m remaining=0.000 m feedback_msgs=51[0m
+FINAL_STATUS=SUCCEEDED traveled=10.000 remaining=0.000 feedback=51

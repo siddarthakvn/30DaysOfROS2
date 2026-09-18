@@ -1,0 +1,10 @@
+# Goal: drive this many meters along the warehouse aisle toward Station B.
+float32 distance_m
+---
+# Result: how far the robot got when the goal terminated.
+float32 distance_traveled_m
+float32 distance_remaining_m
+---
+# Feedback: progress while the delivery is still executing.
+float32 distance_remaining_m
+float32 percent_complete

@@ -1,0 +1,18 @@
+ROS_DOMAIN_ID=45
+RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+DAY05_ROOT=/home/kvn/30-days-ros2/day05-action-cancellation
+cwd=/home/kvn/30-days-ros2/day05-action-cancellation/ros2_nodes
+=== Investigation B: STOP after 2.0s (allow_cancel=true) ===
+Terminal 1 must already be running:
+  ros2 run day05_delivery_bringup delivery_server --ros-args -p allow_cancel:=true
+
+[0m[INFO] [1789752334.190016402] [delivery_client]: Waiting for action 'deliver_to_station' ...[0m
+[0m[INFO] [1789752334.190335063] [delivery_client]: Sending delivery goal distance_m=10.00; supervisor will STOP after 2.00s[0m
+[0m[INFO] [1789752334.192805004] [delivery_client]: Goal accepted id=3920b56549cd4b5ea01792da3abcd2c8[0m
+[0m[INFO] [1789752334.194959302] [delivery_client]: Feedback n=1 remaining=9.800 m percent=2.0%[0m
+[0m[INFO] [1789752334.994745209] [delivery_client]: Feedback n=5 remaining=9.000 m percent=10.0%[0m
+[0m[INFO] [1789752335.996435825] [delivery_client]: Feedback n=10 remaining=8.000 m percent=20.0%[0m
+[33m[WARN] [1789752336.196893240] [delivery_client]: Requesting CANCEL now (supervisor STOP)[0m
+[0m[INFO] [1789752336.200157895] [delivery_client]: Cancel response: return_code=0 goals_canceling=1[0m
+[0m[INFO] [1789752336.397930184] [delivery_client]: Terminal status=CANCELED (5) traveled=2.200 m remaining=7.800 m feedback_msgs=11[0m
+FINAL_STATUS=CANCELED traveled=2.200 remaining=7.800 feedback=11

@@ -1,0 +1,7 @@
+# Day 05 local colcon artifacts (regenerate with ./ros2_nodes/build_ws.sh)
+ws/build/
+ws/install/
+ws/log/
+
+# Keep experiment evidence
+!assets/*.log
