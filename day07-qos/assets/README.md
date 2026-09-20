@@ -12,4 +12,9 @@ Terminal evidence captured during local smoke runs:
 | `C_durability.log` | Late-join / durability cases |
 | `C_topic_info.txt` | Durability settings from `--verbose` |
 
-LinkedIn draft: [`linkedin/DRAFT.md`](linkedin/DRAFT.md)
+LinkedIn:
+
+| File | Role |
+|---|---|
+| [`linkedin/DRAFT.md`](linkedin/DRAFT.md) | Post draft + hero prompt |
+| [`linkedin/01-hero.png`](linkedin/01-hero.png) | Hero image |

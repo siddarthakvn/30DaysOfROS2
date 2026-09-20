@@ -10,6 +10,14 @@
 
 ---
 
+## Image
+
+| Slide | File | Caption idea |
+|:---:|---|---|
+| 1 | `01-hero.png` | Nodes found each other — messages never did (QoS mismatch) |
+
+---
+
 ## Copy-paste post
 
 My nodes found each other.
