@@ -1,0 +1,18 @@
+=== PUB still BEST_EFFORT ===
+[INFO] [1789926152.954895259] [qos_pub]: PUB on /qos_demo/stream @ 10.0 Hz | KEEP_LAST depth=10 reliability=best_effort durability=volatile
+[INFO] [1789926153.946750096] [qos_pub]: PUB seq=10 measured_hz=10.0
+[INFO] [1789926154.946882021] [qos_pub]: PUB seq=20 measured_hz=10.0
+[INFO] [1789926155.946782441] [qos_pub]: PUB seq=30 measured_hz=10.0
+[WARN] [1789926156.414180672] [qos_pub]: New subscription discovered on topic '/qos_demo/stream', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY
+[INFO] [1789926156.947205144] [qos_pub]: PUB seq=40 measured_hz=10.0
+[INFO] [1789926157.947153306] [qos_pub]: PUB seq=50 measured_hz=10.0
+[INFO] [1789926159.046543083] [qos_pub]: PUB seq=61 measured_hz=10.0
+[INFO] [1789926160.047371801] [qos_pub]: PUB seq=71 measured_hz=10.0
+[INFO] [1789926161.146702525] [qos_pub]: PUB seq=82 measured_hz=10.0
+[INFO] [1789926162.147157425] [qos_pub]: PUB seq=92 measured_hz=10.0
+[INFO] [1789926163.146766151] [qos_pub]: PUB seq=102 measured_hz=10.0
+=== SUB BEST_EFFORT (expect receives) ===
+[INFO] [1789926160.342323372] [qos_sub]: SUB on /qos_demo/stream | KEEP_LAST depth=10 reliability=best_effort durability=volatile
+[INFO] [1789926161.334242927] [qos_sub]: SUB recv_total=10 last_seq=83 measured_hz=10.0
+[INFO] [1789926162.334186353] [qos_sub]: SUB recv_total=20 last_seq=93 measured_hz=10.0
+[INFO] [1789926163.334597733] [qos_sub]: SUB recv_total=30 last_seq=103 measured_hz=10.0

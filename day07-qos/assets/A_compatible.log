@@ -1,0 +1,13 @@
+=== PUB ===
+[INFO] [1789926145.567504832] [qos_pub]: PUB on /qos_demo/stream @ 10.0 Hz | KEEP_LAST depth=10 reliability=reliable durability=volatile
+[INFO] [1789926146.559025447] [qos_pub]: PUB seq=10 measured_hz=10.0
+[INFO] [1789926147.559342431] [qos_pub]: PUB seq=20 measured_hz=10.0
+[INFO] [1789926148.559750230] [qos_pub]: PUB seq=30 measured_hz=10.0
+[INFO] [1789926149.659368200] [qos_pub]: PUB seq=41 measured_hz=10.0
+[INFO] [1789926150.759200595] [qos_pub]: PUB seq=52 measured_hz=10.0
+=== SUB ===
+[INFO] [1789926146.542345125] [qos_sub]: SUB on /qos_demo/stream | KEEP_LAST depth=10 reliability=reliable durability=volatile
+[INFO] [1789926147.534225054] [qos_sub]: SUB recv_total=10 last_seq=19 measured_hz=10.0
+[INFO] [1789926148.534134512] [qos_sub]: SUB recv_total=20 last_seq=29 measured_hz=10.0
+[INFO] [1789926149.534289604] [qos_sub]: SUB recv_total=30 last_seq=39 measured_hz=10.0
+[INFO] [1789926150.534869739] [qos_sub]: SUB recv_total=40 last_seq=49 measured_hz=10.0

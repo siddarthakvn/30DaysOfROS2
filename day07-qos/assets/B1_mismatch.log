@@ -1,0 +1,17 @@
+=== PUB ===
+[INFO] [1789926152.954895259] [qos_pub]: PUB on /qos_demo/stream @ 10.0 Hz | KEEP_LAST depth=10 reliability=best_effort durability=volatile
+[INFO] [1789926153.946750096] [qos_pub]: PUB seq=10 measured_hz=10.0
+[INFO] [1789926154.946882021] [qos_pub]: PUB seq=20 measured_hz=10.0
+[INFO] [1789926155.946782441] [qos_pub]: PUB seq=30 measured_hz=10.0
+[WARN] [1789926156.414180672] [qos_pub]: New subscription discovered on topic '/qos_demo/stream', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY
+[INFO] [1789926156.947205144] [qos_pub]: PUB seq=40 measured_hz=10.0
+[INFO] [1789926157.947153306] [qos_pub]: PUB seq=50 measured_hz=10.0
+[INFO] [1789926159.046543083] [qos_pub]: PUB seq=61 measured_hz=10.0
+=== SUB (expect recv_total=0) ===
+[INFO] [1789926153.922851986] [qos_sub]: SUB on /qos_demo/stream | KEEP_LAST depth=10 reliability=reliable durability=volatile
+[INFO] [1789926154.914922851] [qos_sub]: SUB recv_total=0 last_seq=none measured_hz=0.0
+[INFO] [1789926155.914835898] [qos_sub]: SUB recv_total=0 last_seq=none measured_hz=0.0
+[WARN] [1789926156.484674555] [qos_sub]: New publisher discovered on topic '/qos_demo/stream', offering incompatible QoS. No messages will be received from it. Last incompatible policy: RELIABILITY
+[INFO] [1789926156.914922691] [qos_sub]: SUB recv_total=0 last_seq=none measured_hz=0.0
+[INFO] [1789926157.914806792] [qos_sub]: SUB recv_total=0 last_seq=none measured_hz=0.0
+[INFO] [1789926158.914914961] [qos_sub]: SUB recv_total=0 last_seq=none measured_hz=0.0

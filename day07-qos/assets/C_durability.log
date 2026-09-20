@@ -1,0 +1,40 @@
+=== C1 VOLATILE late join ===
+-- PUB --
+[INFO] [1789926165.462227032] [qos_pub]: PUB on /qos_demo/stream @ 2.0 Hz | KEEP_LAST depth=10 reliability=reliable durability=volatile
+[INFO] [1789926166.454194068] [qos_pub]: PUB seq=2 measured_hz=2.0
+[INFO] [1789926167.954227240] [qos_pub]: PUB seq=5 measured_hz=2.0
+[INFO] [1789926168.954291697] [qos_pub]: PUB seq=7 measured_hz=2.0
+[INFO] [1789926170.454045672] [qos_pub]: PUB seq=10 measured_hz=2.0
+-- SUB --
+[INFO] [1789926168.456874374] [qos_sub]: SUB on /qos_demo/stream | KEEP_LAST depth=10 reliability=reliable durability=volatile
+[INFO] [1789926169.448344675] [qos_sub]: SUB recv_total=2 last_seq=7 measured_hz=2.0
+[INFO] [1789926170.448247296] [qos_sub]: SUB recv_total=4 last_seq=9 measured_hz=2.0
+
+=== C2 TRANSIENT_LOCAL late join ===
+-- PUB --
+[INFO] [1789926171.601993590] [qos_pub]: PUB on /qos_demo/stream @ 2.0 Hz | KEEP_LAST depth=10 reliability=reliable durability=transient_local
+[INFO] [1789926172.593874688] [qos_pub]: PUB seq=2 measured_hz=2.0
+[INFO] [1789926173.594291869] [qos_pub]: PUB seq=4 measured_hz=2.0
+[INFO] [1789926175.094228522] [qos_pub]: PUB seq=7 measured_hz=2.0
+[INFO] [1789926176.094115809] [qos_pub]: PUB seq=9 measured_hz=2.0
+[INFO] [1789926177.595190477] [qos_pub]: PUB seq=12 measured_hz=2.0
+-- SUB --
+[INFO] [1789926174.594190551] [qos_sub]: SUB on /qos_demo/stream | KEEP_LAST depth=10 reliability=reliable durability=transient_local
+[INFO] [1789926175.586205829] [qos_sub]: SUB recv_total=7 last_seq=7 measured_hz=7.0
+[INFO] [1789926176.586077239] [qos_sub]: SUB recv_total=9 last_seq=9 measured_hz=2.0
+[INFO] [1789926177.586870386] [qos_sub]: SUB recv_total=11 last_seq=11 measured_hz=2.0
+
+=== C3 VOLATILE pub + TRANSIENT_LOCAL sub (expect 0) ===
+-- PUB --
+[INFO] [1789926178.667670998] [qos_pub]: PUB on /qos_demo/stream @ 2.0 Hz | KEEP_LAST depth=10 reliability=reliable durability=volatile
+[WARN] [1789926179.652745650] [qos_pub]: New subscription discovered on topic '/qos_demo/stream', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: DURABILITY
+[INFO] [1789926179.659141604] [qos_pub]: PUB seq=2 measured_hz=2.0
+[INFO] [1789926180.659518957] [qos_pub]: PUB seq=4 measured_hz=2.0
+[INFO] [1789926181.659574673] [qos_pub]: PUB seq=6 measured_hz=2.0
+[INFO] [1789926182.659582880] [qos_pub]: PUB seq=8 measured_hz=2.0
+-- SUB --
+[INFO] [1789926179.661388396] [qos_sub]: SUB on /qos_demo/stream | KEEP_LAST depth=10 reliability=reliable durability=transient_local
+[WARN] [1789926179.662130961] [qos_sub]: New publisher discovered on topic '/qos_demo/stream', offering incompatible QoS. No messages will be received from it. Last incompatible policy: DURABILITY
+[INFO] [1789926180.653150398] [qos_sub]: SUB recv_total=0 last_seq=none measured_hz=0.0
+[INFO] [1789926181.653039582] [qos_sub]: SUB recv_total=0 last_seq=none measured_hz=0.0
+[INFO] [1789926182.653143758] [qos_sub]: SUB recv_total=0 last_seq=none measured_hz=0.0
