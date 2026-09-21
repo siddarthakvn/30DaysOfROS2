@@ -89,7 +89,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [05](day05-action-cancellation/) | How does a robot cancel a task while it is still executing? | Actions, goals, feedback, cancellation | |
 | 06 | How do robots communicate data that standard ROS messages cannot represent? | Custom `.msg`, `.srv`, `.action` interfaces | |
 | [07](day07-qos/) | Can the wrong QoS policy silently break a robotic system? | DDS QoS, reliability, durability, history, depth | ✅ |
-| 08 | What happens when one callback blocks an entire ROS 2 node? | Executors, callbacks, callback groups, multithreading | |
+| [08](day08-executors/) | What happens when one callback blocks an entire ROS 2 node? | Executors, callbacks, callback groups, multithreading | |
 | 09 | Can I tune a robot without restarting its ROS 2 nodes? | Parameters and runtime configuration | |
 | 10 | How do you bring up an entire robot with one command? | Launch files, launch arguments, remapping | |
 | 11 | How does ROS 2 know what a robot physically looks like? | URDF, links, joints, Xacro | |

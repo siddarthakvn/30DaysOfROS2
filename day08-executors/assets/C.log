@@ -1,0 +1,32 @@
+=== C PUB (tail) ===
+[INFO] [1790012580.899316470] [lidar_pub]: PUB /day08/lidar | warmup=1.0s period=1.5s count=4
+[INFO] [1790012581.889216352] [lidar_pub]: PUB lidar_scan=1 sent=1/4
+[INFO] [1790012583.439136606] [lidar_pub]: PUB lidar_scan=2 sent=2/4
+[INFO] [1790012584.939568006] [lidar_pub]: PUB lidar_scan=3 sent=3/4
+[INFO] [1790012586.489095591] [lidar_pub]: PUB lidar_scan=4 sent=4/4
+[INFO] [1790012586.489607939] [lidar_pub]: PUB complete - exiting
+
+=== C ROBOT ===
+[INFO] [1790012589.304374707] [busy_robot]: ==== SUMMARY ====
+==== SUMMARY ====
+[INFO] [1790012589.304987948] [busy_robot]: CONFIG executor=multi threads=4 group_mode=separate_mutex
+CONFIG executor=multi threads=4 group_mode=separate_mutex
+[INFO] [1790012589.305501877] [busy_robot]: LIDAR blocks=4 duration=avg_ms=500.6
+LIDAR blocks=4 duration=avg_ms=500.6
+[INFO] [1790012589.305919474] [busy_robot]: IMU n=801 median_gap_ms=10.0 max_gap_ms=10.5 missed_gt_2x=0 during_lidar=200
+IMU n=801 median_gap_ms=10.0 max_gap_ms=10.5 missed_gt_2x=0 during_lidar=200
+[INFO] [1790012589.306307950] [busy_robot]: CONTROL n=400 median_gap_ms=20.0 max_gap_ms=20.7 missed_gt_2x=0 during_lidar=100
+CONTROL n=400 median_gap_ms=20.0 max_gap_ms=20.7 missed_gt_2x=0 during_lidar=100
+[INFO] [1790012589.306671067] [busy_robot]: CONCURRENCY max_active_callbacks=2
+CONCURRENCY max_active_callbacks=2
+[INFO] [1790012589.307067397] [busy_robot]: ==== END SUMMARY ====
+
+--- LIDAR events ---
+[INFO] [1790012581.890488911] [busy_robot]: LIDAR START scan=1 block=1 sleep_ms=500
+[INFO] [1790012582.391721599] [busy_robot]: LIDAR END   scan=1 block=1 duration_ms=500.5
+[INFO] [1790012583.440158652] [busy_robot]: LIDAR START scan=2 block=2 sleep_ms=500
+[INFO] [1790012583.941466992] [busy_robot]: LIDAR END   scan=2 block=2 duration_ms=500.5
+[INFO] [1790012584.941543723] [busy_robot]: LIDAR START scan=3 block=3 sleep_ms=500
+[INFO] [1790012585.443256214] [busy_robot]: LIDAR END   scan=3 block=3 duration_ms=500.5
+[INFO] [1790012586.490517069] [busy_robot]: LIDAR START scan=4 block=4 sleep_ms=500
+[INFO] [1790012586.992300675] [busy_robot]: LIDAR END   scan=4 block=4 duration_ms=500.7

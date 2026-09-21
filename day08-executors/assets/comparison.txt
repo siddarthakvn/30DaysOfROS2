@@ -1,0 +1,38 @@
+Day 08 executor comparison
+
+----- A -----
+[INFO] [1790012568.152258000] [busy_robot]: CONFIG executor=single threads=4 group_mode=default
+CONFIG executor=single threads=4 group_mode=default
+[INFO] [1790012568.152654208] [busy_robot]: LIDAR blocks=4 duration=avg_ms=500.4
+LIDAR blocks=4 duration=avg_ms=500.4
+[INFO] [1790012568.153029646] [busy_robot]: IMU n=605 median_gap_ms=10.0 max_gap_ms=507.9 missed_gt_2x=4 during_lidar=0
+IMU n=605 median_gap_ms=10.0 max_gap_ms=507.9 missed_gt_2x=4 during_lidar=0
+[INFO] [1790012568.153421667] [busy_robot]: CONTROL n=304 median_gap_ms=20.0 max_gap_ms=517.9 missed_gt_2x=4 during_lidar=0
+CONTROL n=304 median_gap_ms=20.0 max_gap_ms=517.9 missed_gt_2x=4 during_lidar=0
+[INFO] [1790012568.153794999] [busy_robot]: CONCURRENCY max_active_callbacks=1
+CONCURRENCY max_active_callbacks=1
+
+----- B -----
+[INFO] [1790012578.731651097] [busy_robot]: CONFIG executor=multi threads=4 group_mode=shared_mutex
+CONFIG executor=multi threads=4 group_mode=shared_mutex
+[INFO] [1790012578.732131533] [busy_robot]: LIDAR blocks=4 duration=avg_ms=500.5
+LIDAR blocks=4 duration=avg_ms=500.5
+[INFO] [1790012578.732601403] [busy_robot]: IMU n=601 median_gap_ms=10.0 max_gap_ms=514.7 missed_gt_2x=4 during_lidar=0
+IMU n=601 median_gap_ms=10.0 max_gap_ms=514.7 missed_gt_2x=4 during_lidar=0
+[INFO] [1790012578.733031752] [busy_robot]: CONTROL n=302 median_gap_ms=20.0 max_gap_ms=524.6 missed_gt_2x=4 during_lidar=0
+CONTROL n=302 median_gap_ms=20.0 max_gap_ms=524.6 missed_gt_2x=4 during_lidar=0
+[INFO] [1790012578.733472226] [busy_robot]: CONCURRENCY max_active_callbacks=1
+CONCURRENCY max_active_callbacks=1
+
+----- C -----
+[INFO] [1790012589.304987948] [busy_robot]: CONFIG executor=multi threads=4 group_mode=separate_mutex
+CONFIG executor=multi threads=4 group_mode=separate_mutex
+[INFO] [1790012589.305501877] [busy_robot]: LIDAR blocks=4 duration=avg_ms=500.6
+LIDAR blocks=4 duration=avg_ms=500.6
+[INFO] [1790012589.305919474] [busy_robot]: IMU n=801 median_gap_ms=10.0 max_gap_ms=10.5 missed_gt_2x=0 during_lidar=200
+IMU n=801 median_gap_ms=10.0 max_gap_ms=10.5 missed_gt_2x=0 during_lidar=200
+[INFO] [1790012589.306307950] [busy_robot]: CONTROL n=400 median_gap_ms=20.0 max_gap_ms=20.7 missed_gt_2x=0 during_lidar=100
+CONTROL n=400 median_gap_ms=20.0 max_gap_ms=20.7 missed_gt_2x=0 during_lidar=100
+[INFO] [1790012589.306671067] [busy_robot]: CONCURRENCY max_active_callbacks=2
+CONCURRENCY max_active_callbacks=2
+
