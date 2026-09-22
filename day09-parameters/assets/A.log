@@ -1,0 +1,22 @@
+=== A ROBOT ===
+[INFO] [1790098582.662247484] [velocity_governor]: ==== SUMMARY ====
+==== SUMMARY ====
+[INFO] [1790098582.662752070] [velocity_governor]: CONFIG apply_mode=live request_vx=1.500
+CONFIG apply_mode=live request_vx=1.500
+[INFO] [1790098582.663300022] [velocity_governor]: STORED max_velocity=0.500
+STORED max_velocity=0.500
+[INFO] [1790098582.663947995] [velocity_governor]: EFFECTIVE_MAX=0.500
+EFFECTIVE_MAX=0.500
+[INFO] [1790098582.664664545] [velocity_governor]: TICKS=8 accepts=0 rejects=0
+TICKS=8 accepts=0 rejects=0
+[INFO] [1790098582.665280067] [velocity_governor]: ==== END SUMMARY ====
+
+--- startup / ticks ---
+[INFO] [1790098578.671984527] [velocity_governor]: CONFIG max_velocity=0.500 request_vx=1.500 apply_mode=live run_sec=4.0
+[INFO] [1790098578.672301444] [velocity_governor]: EFFECTIVE_MAX start=0.500
+[INFO] [1790098579.161277665] [velocity_governor]: TICK request=1.500 max=0.500 out=0.500 mode=live
+[INFO] [1790098579.661186547] [velocity_governor]: TICK request=1.500 max=0.500 out=0.500 mode=live
+[INFO] [1790098580.161407662] [velocity_governor]: TICK request=1.500 max=0.500 out=0.500 mode=live
+[INFO] [1790098580.661280980] [velocity_governor]: TICK request=1.500 max=0.500 out=0.500 mode=live
+[INFO] [1790098581.161355874] [velocity_governor]: TICK request=1.500 max=0.500 out=0.500 mode=live
+[INFO] [1790098581.661732910] [velocity_governor]: TICK request=1.500 max=0.500 out=0.500 mode=live

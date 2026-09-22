@@ -1,0 +1,42 @@
+=== C CLI ===
+ros2 param set: Setting parameter failed: max_velocity must be in [0.0, 2.0]
+ros2 param get: Double value is: 1.0
+
+=== C ROBOT ===
+[INFO] [1790098606.694192083] [velocity_governor]: ==== SUMMARY ====
+==== SUMMARY ====
+[INFO] [1790098606.694730600] [velocity_governor]: CONFIG apply_mode=live request_vx=1.500
+CONFIG apply_mode=live request_vx=1.500
+[INFO] [1790098606.695213034] [velocity_governor]: STORED max_velocity=1.000
+STORED max_velocity=1.000
+[INFO] [1790098606.695672296] [velocity_governor]: EFFECTIVE_MAX=1.000
+EFFECTIVE_MAX=1.000
+[INFO] [1790098606.696123237] [velocity_governor]: TICKS=20 accepts=0 rejects=1
+TICKS=20 accepts=0 rejects=1
+[INFO] [1790098606.696591726] [velocity_governor]: ==== END SUMMARY ====
+
+--- reject evidence ---
+[INFO] [1790098596.703874836] [velocity_governor]: CONFIG max_velocity=1.000 request_vx=1.500 apply_mode=live run_sec=10.0
+[INFO] [1790098597.193934770] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098597.694295936] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098598.193843261] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098598.693630631] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098599.193552815] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098599.694246296] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098600.194196923] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[WARN] [1790098600.261446449] [velocity_governor]: PARAM_REJECT name=max_velocity value=10.0 reason=max_velocity must be in [0.0, 2.0]
+[INFO] [1790098600.693604499] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098601.193916089] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098601.693614467] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098602.193708404] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098602.694133885] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098603.193563983] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098603.693396745] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098604.194399953] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098604.693734434] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098605.193763728] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098605.693357211] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098606.193241946] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098606.693542347] [velocity_governor]: TICK request=1.500 max=1.000 out=1.000 mode=live
+[INFO] [1790098606.694730600] [velocity_governor]: CONFIG apply_mode=live request_vx=1.500
+CONFIG apply_mode=live request_vx=1.500

@@ -1,0 +1,8 @@
+# Day 09 — Investigation A: startup override (safer cruise limit)
+velocity_governor:
+  ros__parameters:
+    max_velocity: 0.5
+    request_vx: 1.5
+    apply_mode: live
+    run_sec: 4.0
+    publish_hz: 2.0
