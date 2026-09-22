@@ -8,9 +8,9 @@
 
 ---
 
-## Hero prompt (saved)
+## Hero image
 
-Bright sunlit lab, robot + tuning knobs, cream text panel:
+[`01-hero.png`](01-hero.png) — bright sunlit lab, robot + tuning knobs, cream text panel:
 **“Tune it live.”** / **No rebuild. No restart.**
 
 ---
