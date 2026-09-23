@@ -1,0 +1,9 @@
+# Shared defaults for Day 10 stubs (wildcards apply across namespaces)
+/**:
+  ros__parameters:
+    rate_hz: 5.0
+
+control_stub:
+  ros__parameters:
+    speed: 0.25
+    rate_hz: 2.0

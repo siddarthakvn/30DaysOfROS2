@@ -1,0 +1,110 @@
+Day 10 launch comparison
+
+----- A -----
+=== A ===
+namespace=robot1
+cli_args=defaults
+
+--- process starts ---
+[INFO] [start_lidar_stub-1]: process started with pid [11078]
+[INFO] [start_imu_stub-2]: process started with pid [11080]
+[INFO] [start_camera_stub-3]: process started with pid [11082]
+[start_imu_stub-2] [INFO] [1790181439.452522002] [robot1.imu_stub]: imu publishing on relative topic 'imu' @ 5.0 Hz
+[start_lidar_stub-1] [INFO] [1790181439.453454512] [robot1.lidar_stub]: lidar publishing on relative topic 'scan' @ 5.0 Hz
+[start_camera_stub-3] [INFO] [1790181439.458586700] [robot1.camera_stub]: camera publishing on relative topic 'image' @ 5.0 Hz
+[INFO] [start_control_stub-4]: process started with pid [11147]
+[start_control_stub-4] [INFO] [1790181439.968423234] [robot1.control_stub]: control publishing on relative 'cmd_vel' speed=0.25
+
+--- ros2 node list ---
+/robot1/camera_stub
+/robot1/control_stub
+/robot1/imu_stub
+/robot1/lidar_stub
+
+--- ros2 topic list ---
+/parameter_events
+/robot1/cmd_vel
+/robot1/image
+/robot1/imu
+/robot1/scan
+/rosout
+
+--- param /robot1/control_stub speed ---
+Double value is: 0.25
+
+----- B -----
+=== B ===
+namespace=robot2
+cli_args=namespace:=robot2
+
+--- process starts ---
+[INFO] [start_lidar_stub-1]: process started with pid [11325]
+[INFO] [start_imu_stub-2]: process started with pid [11327]
+[INFO] [start_camera_stub-3]: process started with pid [11329]
+[start_camera_stub-3] [INFO] [1790181450.911333454] [robot2.camera_stub]: camera publishing on relative topic 'image' @ 5.0 Hz
+[start_lidar_stub-1] [INFO] [1790181450.914225329] [robot2.lidar_stub]: lidar publishing on relative topic 'scan' @ 5.0 Hz
+[start_imu_stub-2] [INFO] [1790181450.918026896] [robot2.imu_stub]: imu publishing on relative topic 'imu' @ 5.0 Hz
+[INFO] [start_control_stub-4]: process started with pid [11394]
+[start_control_stub-4] [INFO] [1790181451.409599170] [robot2.control_stub]: control publishing on relative 'cmd_vel' speed=0.25
+
+--- ros2 node list ---
+/robot1/camera_stub
+/robot1/control_stub
+/robot1/imu_stub
+/robot1/lidar_stub
+/robot2/camera_stub
+/robot2/control_stub
+/robot2/imu_stub
+/robot2/lidar_stub
+
+--- ros2 topic list ---
+/parameter_events
+/robot1/cmd_vel
+/robot2/cmd_vel
+/robot2/imu
+/robot2/scan
+/rosout
+
+--- param /robot2/control_stub speed ---
+Double value is: 0.25
+
+----- C -----
+=== C ===
+namespace=robot1
+cli_args=namespace:=robot1 use_camera:=false
+
+--- process starts ---
+[INFO] [start_lidar_stub-1]: process started with pid [11541]
+[INFO] [start_imu_stub-2]: process started with pid [11543]
+[start_imu_stub-2] [INFO] [1790181462.636139011] [robot1.imu_stub]: imu publishing on relative topic 'imu' @ 5.0 Hz
+[start_lidar_stub-1] [INFO] [1790181462.640591622] [robot1.lidar_stub]: lidar publishing on relative topic 'scan' @ 5.0 Hz
+[INFO] [start_control_stub-3]: process started with pid [11587]
+[start_control_stub-3] [INFO] [1790181463.152915219] [robot1.control_stub]: control publishing on relative 'cmd_vel' speed=0.25
+
+--- ros2 node list ---
+/robot1/camera_stub
+/robot1/control_stub
+/robot1/control_stub
+/robot1/imu_stub
+/robot1/imu_stub
+/robot1/lidar_stub
+/robot1/lidar_stub
+/robot2/camera_stub
+/robot2/control_stub
+/robot2/imu_stub
+/robot2/lidar_stub
+
+--- ros2 topic list ---
+/parameter_events
+/robot1/cmd_vel
+/robot1/image
+/robot1/imu
+/robot1/scan
+/robot2/cmd_vel
+/robot2/image
+/robot2/imu
+/robot2/scan
+/rosout
+
+--- param /robot1/control_stub speed ---
+Double value is: 0.25
