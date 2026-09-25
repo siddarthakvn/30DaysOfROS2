@@ -3,6 +3,7 @@
 !*.log
 !*.txt
 !*.urdf
+!README.md
 !linkedin/
 !linkedin/**
 .ros_logs/
