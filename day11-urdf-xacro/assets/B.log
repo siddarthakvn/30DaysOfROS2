@@ -1,0 +1,23 @@
+=== B ===
+model=urdf/humanoid_movable.urdf
+
+--- check_urdf ---
+robot name is: day11_humanoid_movable
+---------- Successfully Parsed XML ---------------
+root Link: base_link has 1 child(ren)
+    child(1):  torso
+        child(1):  r_upper_arm
+            child(1):  r_forearm
+                child(1):  r_hand
+
+--- revolute joints ---
+47:  <joint name="r_shoulder" type="revolute">
+67:  <joint name="r_elbow" type="revolute">
+
+--- pose1 ROS_DOMAIN_ID=111 shoulder=0 elbow=0 ---
+TF base_link -> r_hand: x=+0.7200 y=+0.0000 z=+0.4500
+
+--- pose2 ROS_DOMAIN_ID=112 shoulder=0.80 elbow=1.20 ---
+TF base_link -> r_hand: x=+0.2325 y=+0.0000 z=-0.0198
+
+Expect: r_hand translation differs between pose1 and pose2 (H2/H3/H6).

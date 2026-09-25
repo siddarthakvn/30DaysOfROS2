@@ -1,0 +1,8 @@
+*
+!.gitignore
+!*.log
+!*.txt
+!*.urdf
+!linkedin/
+!linkedin/**
+.ros_logs/

@@ -1,0 +1,45 @@
+=== C ===
+model=xacro/humanoid.urdf.xacro
+expanded=/home/kvn/30-days-ros2/day11-urdf-xacro/assets/humanoid_xacro_expanded.urdf
+ROS_DOMAIN_ID=113
+
+--- xacro expand (link/joint names) ---
+  <link name="base_link">
+  <link name="torso">
+  <joint name="base_to_torso" type="fixed">
+  <link name="r_upper_arm">
+  <joint name="r_shoulder" type="revolute">
+  <link name="r_forearm">
+  <joint name="r_elbow" type="revolute">
+  <link name="r_hand">
+  <joint name="r_wrist" type="fixed">
+  <link name="l_upper_arm">
+  <joint name="l_shoulder" type="revolute">
+  <link name="l_forearm">
+  <joint name="l_elbow" type="revolute">
+  <link name="l_hand">
+  <joint name="l_wrist" type="fixed">
+
+--- check_urdf on expanded URDF ---
+robot name is: day11_humanoid_xacro
+---------- Successfully Parsed XML ---------------
+root Link: base_link has 1 child(ren)
+    child(1):  torso
+        child(1):  l_upper_arm
+            child(1):  l_forearm
+                child(1):  l_hand
+        child(2):  r_upper_arm
+            child(1):  r_forearm
+                child(1):  r_hand
+
+--- L/R symmetry counts ---
+r_ name hits: 9
+l_ name hits: 9
+r_shoulder present: 1
+l_shoulder present: 1
+
+--- TF both hands at zero joint states ---
+TF base_link -> r_hand: x=+0.7200 y=+0.0000 z=+0.4500
+TF base_link -> l_hand: x=-0.7200 y=+0.0000 z=+0.4500
+
+Expect: mirrored X for left vs right hand (H4).

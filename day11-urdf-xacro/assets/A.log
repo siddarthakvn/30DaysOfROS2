@@ -1,0 +1,35 @@
+=== A ===
+model=urdf/humanoid_fixed.urdf
+ROS_DOMAIN_ID=110
+
+--- check_urdf ---
+robot name is: day11_humanoid_fixed
+---------- Successfully Parsed XML ---------------
+root Link: base_link has 1 child(ren)
+    child(1):  torso
+        child(1):  r_upper_arm
+            child(1):  r_forearm
+                child(1):  r_hand
+
+--- links / joints (grep) ---
+  <link name="base_link">
+  <link name="torso">
+  <joint name="base_to_torso" type="fixed">
+  <link name="r_upper_arm">
+  <joint name="r_shoulder" type="fixed">
+  <link name="r_forearm">
+  <joint name="r_elbow" type="fixed">
+  <link name="r_hand">
+  <joint name="r_wrist" type="fixed">
+
+--- ros2 node list ---
+/robot_state_publisher
+
+--- robot_description length ---
+chars= 2144
+has_base_link= True
+has_r_hand= True
+
+--- TF (fixed tree on /tf_static) ---
+TF base_link -> r_hand: x=+0.7200 y=+0.0000 z=+0.4500
+TF base_link -> torso: x=+0.0000 y=+0.0000 z=+0.1000

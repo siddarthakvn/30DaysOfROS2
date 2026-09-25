@@ -1,0 +1,111 @@
+Day 11 URDF / Xacro comparison
+
+----- A -----
+=== A ===
+model=urdf/humanoid_fixed.urdf
+ROS_DOMAIN_ID=110
+
+--- check_urdf ---
+robot name is: day11_humanoid_fixed
+---------- Successfully Parsed XML ---------------
+root Link: base_link has 1 child(ren)
+    child(1):  torso
+        child(1):  r_upper_arm
+            child(1):  r_forearm
+                child(1):  r_hand
+
+--- links / joints (grep) ---
+  <link name="base_link">
+  <link name="torso">
+  <joint name="base_to_torso" type="fixed">
+  <link name="r_upper_arm">
+  <joint name="r_shoulder" type="fixed">
+  <link name="r_forearm">
+  <joint name="r_elbow" type="fixed">
+  <link name="r_hand">
+  <joint name="r_wrist" type="fixed">
+
+--- ros2 node list ---
+/robot_state_publisher
+
+--- robot_description length ---
+chars= 2144
+has_base_link= True
+has_r_hand= True
+
+--- TF (fixed tree on /tf_static) ---
+TF base_link -> r_hand: x=+0.7200 y=+0.0000 z=+0.4500
+TF base_link -> torso: x=+0.0000 y=+0.0000 z=+0.1000
+
+----- B -----
+=== B ===
+model=urdf/humanoid_movable.urdf
+
+--- check_urdf ---
+robot name is: day11_humanoid_movable
+---------- Successfully Parsed XML ---------------
+root Link: base_link has 1 child(ren)
+    child(1):  torso
+        child(1):  r_upper_arm
+            child(1):  r_forearm
+                child(1):  r_hand
+
+--- revolute joints ---
+47:  <joint name="r_shoulder" type="revolute">
+67:  <joint name="r_elbow" type="revolute">
+
+--- pose1 ROS_DOMAIN_ID=111 shoulder=0 elbow=0 ---
+TF base_link -> r_hand: x=+0.7200 y=+0.0000 z=+0.4500
+
+--- pose2 ROS_DOMAIN_ID=112 shoulder=0.80 elbow=1.20 ---
+TF base_link -> r_hand: x=+0.2325 y=+0.0000 z=-0.0198
+
+Expect: r_hand translation differs between pose1 and pose2 (H2/H3/H6).
+
+----- C -----
+=== C ===
+model=xacro/humanoid.urdf.xacro
+expanded=/home/kvn/30-days-ros2/day11-urdf-xacro/assets/humanoid_xacro_expanded.urdf
+ROS_DOMAIN_ID=113
+
+--- xacro expand (link/joint names) ---
+  <link name="base_link">
+  <link name="torso">
+  <joint name="base_to_torso" type="fixed">
+  <link name="r_upper_arm">
+  <joint name="r_shoulder" type="revolute">
+  <link name="r_forearm">
+  <joint name="r_elbow" type="revolute">
+  <link name="r_hand">
+  <joint name="r_wrist" type="fixed">
+  <link name="l_upper_arm">
+  <joint name="l_shoulder" type="revolute">
+  <link name="l_forearm">
+  <joint name="l_elbow" type="revolute">
+  <link name="l_hand">
+  <joint name="l_wrist" type="fixed">
+
+--- check_urdf on expanded URDF ---
+robot name is: day11_humanoid_xacro
+---------- Successfully Parsed XML ---------------
+root Link: base_link has 1 child(ren)
+    child(1):  torso
+        child(1):  l_upper_arm
+            child(1):  l_forearm
+                child(1):  l_hand
+        child(2):  r_upper_arm
+            child(1):  r_forearm
+                child(1):  r_hand
+
+--- L/R symmetry counts ---
+r_ name hits: 9
+l_ name hits: 9
+r_shoulder present: 1
+l_shoulder present: 1
+
+--- TF both hands at zero joint states ---
+TF base_link -> r_hand: x=+0.7200 y=+0.0000 z=+0.4500
+TF base_link -> l_hand: x=-0.7200 y=+0.0000 z=+0.4500
+
+Expect: mirrored X for left vs right hand (H4).
+
