@@ -1,0 +1,36 @@
+=== A ===
+ROS_DOMAIN_ID=120
+mode=odom_only  tree=odom->base_link
+
+--- SUMMARY ---
+[python3-2] [INFO] [1790444540.736116039] [frame_probe]: ==== SUMMARY ====
+[python3-2] [INFO] [1790444540.736577598] [frame_probe]: odom_samples=109  map_samples=0  map_misses=109
+[python3-2] [INFO] [1790444540.736962290] [frame_probe]: odom_robot_max_step_m=0.0250
+[python3-2] [INFO] [1790444540.737353607] [frame_probe]: map_robot_max_step_m=0.0000
+[python3-2] [INFO] [1790444540.737717478] [frame_probe]: odom_nose_max_step_m=0.0251
+[python3-2] [INFO] [1790444540.738069706] [frame_probe]: map_nose_max_step_m=0.0000
+[python3-2] [INFO] [1790444540.738419612] [frame_probe]: kitchen_in_base_max_step_m=0.0000
+[python3-2] [INFO] [1790444540.738782133] [frame_probe]: odom_robot_final=(+2.695,+0.295)
+[python3-2] [INFO] [1790444540.739168900] [frame_probe]: ==== END SUMMARY ====
+
+--- highlights ---
+[python3-1] [INFO] [1790444529.749859556] [odom_driver]: odom_driver odom->base_link vx=0.25 yaw_bias=0.02 run_sec=12.0
+[python3-2] [INFO] [1790444529.749869690] [frame_probe]: frame_probe require_map=False kitchen=(5.0,0.0)
+[python3-1] [INFO] [1790444530.236340939] [odom_driver]: ODOM pose x=+0.125 y=+0.001 yaw=+0.010
+[python3-1] [INFO] [1790444530.736146745] [odom_driver]: ODOM pose x=+0.250 y=+0.003 yaw=+0.020
+[python3-2] [INFO] [1790444530.736827669] [frame_probe]: t= 1.00s  odom_robot=(+0.242,+0.002)
+[python3-1] [INFO] [1790444531.236217530] [odom_driver]: ODOM pose x=+0.375 y=+0.006 yaw=+0.030
+[python3-1] [INFO] [1790444531.736038298] [odom_driver]: ODOM pose x=+0.500 y=+0.010 yaw=+0.040
+[python3-2] [INFO] [1790444531.736660829] [frame_probe]: t= 2.00s  odom_robot=(+0.492,+0.010)
+[python3-1] [INFO] [1790444532.236605377] [odom_driver]: ODOM pose x=+0.625 y=+0.016 yaw=+0.050
+[python3-1] [INFO] [1790444532.736160816] [odom_driver]: ODOM pose x=+0.750 y=+0.023 yaw=+0.060
+[python3-2] [INFO] [1790444532.736950234] [frame_probe]: t= 3.00s  odom_robot=(+0.741,+0.022)
+[python3-1] [INFO] [1790444533.236464020] [odom_driver]: ODOM pose x=+0.874 y=+0.031 yaw=+0.070
+[python3-1] [INFO] [1790444533.736042017] [odom_driver]: ODOM pose x=+0.999 y=+0.040 yaw=+0.080
+[python3-2] [INFO] [1790444533.737280466] [frame_probe]: t= 4.00s  odom_robot=(+0.991,+0.040)
+[python3-1] [INFO] [1790444534.236157767] [odom_driver]: ODOM pose x=+1.123 y=+0.051 yaw=+0.090
+[python3-1] [INFO] [1790444534.736247541] [odom_driver]: ODOM pose x=+1.248 y=+0.063 yaw=+0.100
+[python3-2] [INFO] [1790444534.736986733] [frame_probe]: t= 5.00s  odom_robot=(+1.240,+0.062)
+[python3-1] [INFO] [1790444535.235852937] [odom_driver]: ODOM pose x=+1.372 y=+0.076 yaw=+0.110
+[python3-1] [INFO] [1790444535.736054280] [odom_driver]: ODOM pose x=+1.496 y=+0.090 yaw=+0.120
+[python3-2] [INFO] [1790444535.736564774] [frame_probe]: t= 6.00s  odom_robot=(+1.488,+0.089)

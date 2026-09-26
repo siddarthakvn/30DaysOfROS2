@@ -1,0 +1,54 @@
+=== C ===
+ROS_DOMAIN_ID=122
+mode=dual_parent_conflict
+
+--- SUMMARY ---
+[INFO] [1790444565.772891373] [conflict_demo]: ==== SUMMARY ====
+[INFO] [1790444565.773645494] [conflict_demo]: scenario=dual_parent_conflict
+[INFO] [1790444565.774241317] [conflict_demo]: phase_final=dual_parent
+[INFO] [1790444565.774873671] [conflict_demo]: lookup_ok=118
+[INFO] [1790444565.775403815] [conflict_demo]: lookup_fail=120
+[INFO] [1790444565.775812070] [conflict_demo]: note=REP-105 requires map->odom->base_link (one parent per frame)
+[INFO] [1790444565.776192018] [conflict_demo]: ==== END SUMMARY ====
+
+--- conflict / lookup evidence ---
+[WARN] [1790444559.823257317] [conflict_demo]: lookup odom->base_link FAILED: "odom" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444559.823875265] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444559.873099154] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444559.923167118] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444559.973241709] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.023425132] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.073472775] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.123463611] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.173285731] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.223213792] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[ERROR] [1790444561.773463537] [conflict_demo]: ILLEGAL: adding map->base_link while odom->base_link exists
+[WARN] [1790444561.774717208] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1790444561.775331634] [conflict_demo]: t=2.0s phase=dual_parent map->odom_edge=NO ok=39 fail=41
+[WARN] [1790444561.824313356] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444561.873758171] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444561.923141242] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444561.973220546] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.023141790] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.073963357] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.123847542] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.173751188] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.223081149] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[INFO] [1790444562.773215314] [conflict_demo]: t=3.0s phase=dual_parent map->odom_edge=NO ok=59 fail=61
+[WARN] [1790444563.773205082] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[INFO] [1790444563.773944728] [conflict_demo]: t=4.0s phase=dual_parent map->odom_edge=NO ok=79 fail=81
+[WARN] [1790444563.823386062] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444563.873132814] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444563.923151087] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444563.973117073] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.023177949] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.073163052] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.123305579] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.173190258] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.223168601] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[INFO] [1790444564.773380365] [conflict_demo]: t=5.0s phase=dual_parent map->odom_edge=NO ok=99 fail=101
+[INFO] [1790444565.773645494] [conflict_demo]: scenario=dual_parent_conflict
+[INFO] [1790444565.774241317] [conflict_demo]: phase_final=dual_parent
+[INFO] [1790444565.774873671] [conflict_demo]: lookup_ok=118
+[INFO] [1790444565.775403815] [conflict_demo]: lookup_fail=120
+[INFO] [1790444565.775812070] [conflict_demo]: note=REP-105 requires map->odom->base_link (one parent per frame)

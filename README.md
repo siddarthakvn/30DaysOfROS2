@@ -93,7 +93,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [09](day09-parameters/) | Can I tune a robot without restarting its ROS 2 nodes? | Parameters and runtime configuration | |
 | [10](day10-launch/) | How do you bring up an entire robot with one command? | Launch files, launch arguments, remapping | |
 | [11](day11-urdf-xacro/) | How does ROS 2 know what a robot physically looks like? | URDF, links, joints, Xacro | |
-| 12 | Why does a robot need `base_link`, `odom`, and `map`? | TF2, coordinate frames, transforms | |
+| [12](day12-tf2/) | Why does a robot need `base_link`, `odom`, and `map`? | TF2, coordinate frames, transforms | |
 | 13 | Who actually publishes the robot's transform tree? | Robot State Publisher, Joint State Publisher, TF tree | |
 | 14 | I pressed one keyboard key. How did that make a simulated robot move? | Gazebo, teleoperation, `/cmd_vel`, Twist, differential drive | |
 | 15 | My simulated LiDAR was perfect. Why is that a problem? | Gazebo sensors, plugins, LiDAR, IMU, noise, update rate | |

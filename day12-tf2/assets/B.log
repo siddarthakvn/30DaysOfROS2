@@ -1,0 +1,51 @@
+=== B ===
+ROS_DOMAIN_ID=121
+mode=map_jump  tree=map->odom->base_link
+
+--- SUMMARY ---
+[python3-3] [INFO] [1790444555.832996643] [frame_probe]: ==== SUMMARY ====
+[python3-3] [INFO] [1790444555.833458686] [frame_probe]: odom_samples=109  map_samples=109  map_misses=0
+[python3-3] [INFO] [1790444555.833816231] [frame_probe]: odom_robot_max_step_m=0.0250
+[python3-3] [INFO] [1790444555.834175676] [frame_probe]: map_robot_max_step_m=1.5504
+[python3-3] [INFO] [1790444555.834511787] [frame_probe]: odom_nose_max_step_m=0.0251
+[python3-3] [INFO] [1790444555.834836942] [frame_probe]: map_nose_max_step_m=1.6979
+[python3-3] [INFO] [1790444555.835168402] [frame_probe]: kitchen_in_base_max_step_m=2.3272
+[python3-3] [INFO] [1790444555.835488544] [frame_probe]: odom_robot_final=(+2.695,+0.295)
+[python3-3] [INFO] [1790444555.835822309] [frame_probe]: map_robot_final=(+3.931,+2.001)
+[python3-3] [INFO] [1790444555.836174525] [frame_probe]: kitchen_in_base_final=(-0.174,-2.262)
+[python3-3] [INFO] [1790444555.836519761] [frame_probe]: ==== END SUMMARY ====
+
+--- MAP JUMP line ---
+[python3-2] [WARN] [1790444549.822479720] [map_localizer]: MAP JUMP applied map->odom  x=+1.500 y=+0.800 yaw=+0.350
+
+--- highlights (around jump) ---
+[python3-1] [INFO] [1790444545.346837765] [odom_driver]: ODOM pose x=+0.125 y=+0.001 yaw=+0.010
+[python3-3] [INFO] [1790444545.834924825] [frame_probe]: t= 1.00s  odom_robot=(+0.242,+0.002)  map_robot=(+0.242,+0.002)
+[python3-1] [INFO] [1790444545.846762567] [odom_driver]: ODOM pose x=+0.250 y=+0.003 yaw=+0.020
+[python3-1] [INFO] [1790444546.346729325] [odom_driver]: ODOM pose x=+0.375 y=+0.006 yaw=+0.030
+[python3-3] [INFO] [1790444546.833807800] [frame_probe]: t= 2.00s  odom_robot=(+0.492,+0.010)  map_robot=(+0.492,+0.010)
+[python3-1] [INFO] [1790444546.846923487] [odom_driver]: ODOM pose x=+0.500 y=+0.010 yaw=+0.040
+[python3-1] [INFO] [1790444547.346904849] [odom_driver]: ODOM pose x=+0.625 y=+0.016 yaw=+0.050
+[python3-3] [INFO] [1790444547.833799019] [frame_probe]: t= 3.00s  odom_robot=(+0.741,+0.022)  map_robot=(+0.741,+0.022)
+[python3-1] [INFO] [1790444547.846790037] [odom_driver]: ODOM pose x=+0.750 y=+0.023 yaw=+0.060
+[python3-1] [INFO] [1790444548.346614483] [odom_driver]: ODOM pose x=+0.874 y=+0.031 yaw=+0.070
+[python3-3] [INFO] [1790444548.833686483] [frame_probe]: t= 4.00s  odom_robot=(+0.991,+0.040)  map_robot=(+0.991,+0.040)
+[python3-1] [INFO] [1790444548.846736156] [odom_driver]: ODOM pose x=+0.999 y=+0.040 yaw=+0.080
+[python3-1] [INFO] [1790444549.346769343] [odom_driver]: ODOM pose x=+1.123 y=+0.051 yaw=+0.090
+[python3-2] [WARN] [1790444549.822479720] [map_localizer]: MAP JUMP applied map->odom  x=+1.500 y=+0.800 yaw=+0.350
+[python3-3] [INFO] [1790444549.833740124] [frame_probe]: t= 5.00s  odom_robot=(+1.240,+0.062)  map_robot=(+2.397,+1.063)
+[python3-1] [INFO] [1790444549.846748927] [odom_driver]: ODOM pose x=+1.248 y=+0.063 yaw=+0.100
+[python3-1] [INFO] [1790444550.346882102] [odom_driver]: ODOM pose x=+1.372 y=+0.076 yaw=+0.110
+[python3-3] [INFO] [1790444550.833673413] [frame_probe]: t= 6.00s  odom_robot=(+1.488,+0.089)  map_robot=(+2.867,+1.394)
+[python3-1] [INFO] [1790444550.846801636] [odom_driver]: ODOM pose x=+1.496 y=+0.090 yaw=+0.120
+[python3-1] [INFO] [1790444551.346813214] [odom_driver]: ODOM pose x=+1.620 y=+0.106 yaw=+0.130
+[python3-3] [INFO] [1790444551.833752924] [frame_probe]: t= 7.00s  odom_robot=(+1.736,+0.122)  map_robot=(+3.089,+1.510)
+[python3-1] [INFO] [1790444551.846762092] [odom_driver]: ODOM pose x=+1.744 y=+0.123 yaw=+0.140
+[python3-1] [INFO] [1790444552.346998337] [odom_driver]: ODOM pose x=+1.868 y=+0.141 yaw=+0.150
+[python3-3] [INFO] [1790444552.833708490] [frame_probe]: t= 8.00s  odom_robot=(+1.983,+0.159)  map_robot=(+3.308,+1.629)
+[python3-1] [INFO] [1790444552.846844874] [odom_driver]: ODOM pose x=+1.991 y=+0.160 yaw=+0.160
+[python3-1] [INFO] [1790444553.346872502] [odom_driver]: ODOM pose x=+2.115 y=+0.181 yaw=+0.170
+[python3-3] [INFO] [1790444553.833999875] [frame_probe]: t= 9.00s  odom_robot=(+2.230,+0.201)  map_robot=(+3.525,+1.754)
+[python3-1] [INFO] [1790444553.846782967] [odom_driver]: ODOM pose x=+2.238 y=+0.203 yaw=+0.180
+[python3-1] [INFO] [1790444554.346803994] [odom_driver]: ODOM pose x=+2.361 y=+0.226 yaw=+0.190
+[python3-3] [INFO] [1790444554.833570155] [frame_probe]: t=10.00s  odom_robot=(+2.475,+0.248)  map_robot=(+3.740,+1.882)

@@ -1,0 +1,149 @@
+Day 12 TF2 comparison — base_link / odom / map
+
+----- A -----
+=== A ===
+ROS_DOMAIN_ID=120
+mode=odom_only  tree=odom->base_link
+
+--- SUMMARY ---
+[python3-2] [INFO] [1790444540.736116039] [frame_probe]: ==== SUMMARY ====
+[python3-2] [INFO] [1790444540.736577598] [frame_probe]: odom_samples=109  map_samples=0  map_misses=109
+[python3-2] [INFO] [1790444540.736962290] [frame_probe]: odom_robot_max_step_m=0.0250
+[python3-2] [INFO] [1790444540.737353607] [frame_probe]: map_robot_max_step_m=0.0000
+[python3-2] [INFO] [1790444540.737717478] [frame_probe]: odom_nose_max_step_m=0.0251
+[python3-2] [INFO] [1790444540.738069706] [frame_probe]: map_nose_max_step_m=0.0000
+[python3-2] [INFO] [1790444540.738419612] [frame_probe]: kitchen_in_base_max_step_m=0.0000
+[python3-2] [INFO] [1790444540.738782133] [frame_probe]: odom_robot_final=(+2.695,+0.295)
+[python3-2] [INFO] [1790444540.739168900] [frame_probe]: ==== END SUMMARY ====
+
+--- highlights ---
+[python3-1] [INFO] [1790444529.749859556] [odom_driver]: odom_driver odom->base_link vx=0.25 yaw_bias=0.02 run_sec=12.0
+[python3-2] [INFO] [1790444529.749869690] [frame_probe]: frame_probe require_map=False kitchen=(5.0,0.0)
+[python3-1] [INFO] [1790444530.236340939] [odom_driver]: ODOM pose x=+0.125 y=+0.001 yaw=+0.010
+[python3-1] [INFO] [1790444530.736146745] [odom_driver]: ODOM pose x=+0.250 y=+0.003 yaw=+0.020
+[python3-2] [INFO] [1790444530.736827669] [frame_probe]: t= 1.00s  odom_robot=(+0.242,+0.002)
+[python3-1] [INFO] [1790444531.236217530] [odom_driver]: ODOM pose x=+0.375 y=+0.006 yaw=+0.030
+[python3-1] [INFO] [1790444531.736038298] [odom_driver]: ODOM pose x=+0.500 y=+0.010 yaw=+0.040
+[python3-2] [INFO] [1790444531.736660829] [frame_probe]: t= 2.00s  odom_robot=(+0.492,+0.010)
+[python3-1] [INFO] [1790444532.236605377] [odom_driver]: ODOM pose x=+0.625 y=+0.016 yaw=+0.050
+[python3-1] [INFO] [1790444532.736160816] [odom_driver]: ODOM pose x=+0.750 y=+0.023 yaw=+0.060
+[python3-2] [INFO] [1790444532.736950234] [frame_probe]: t= 3.00s  odom_robot=(+0.741,+0.022)
+[python3-1] [INFO] [1790444533.236464020] [odom_driver]: ODOM pose x=+0.874 y=+0.031 yaw=+0.070
+[python3-1] [INFO] [1790444533.736042017] [odom_driver]: ODOM pose x=+0.999 y=+0.040 yaw=+0.080
+[python3-2] [INFO] [1790444533.737280466] [frame_probe]: t= 4.00s  odom_robot=(+0.991,+0.040)
+[python3-1] [INFO] [1790444534.236157767] [odom_driver]: ODOM pose x=+1.123 y=+0.051 yaw=+0.090
+[python3-1] [INFO] [1790444534.736247541] [odom_driver]: ODOM pose x=+1.248 y=+0.063 yaw=+0.100
+[python3-2] [INFO] [1790444534.736986733] [frame_probe]: t= 5.00s  odom_robot=(+1.240,+0.062)
+[python3-1] [INFO] [1790444535.235852937] [odom_driver]: ODOM pose x=+1.372 y=+0.076 yaw=+0.110
+[python3-1] [INFO] [1790444535.736054280] [odom_driver]: ODOM pose x=+1.496 y=+0.090 yaw=+0.120
+[python3-2] [INFO] [1790444535.736564774] [frame_probe]: t= 6.00s  odom_robot=(+1.488,+0.089)
+
+----- B -----
+=== B ===
+ROS_DOMAIN_ID=121
+mode=map_jump  tree=map->odom->base_link
+
+--- SUMMARY ---
+[python3-3] [INFO] [1790444555.832996643] [frame_probe]: ==== SUMMARY ====
+[python3-3] [INFO] [1790444555.833458686] [frame_probe]: odom_samples=109  map_samples=109  map_misses=0
+[python3-3] [INFO] [1790444555.833816231] [frame_probe]: odom_robot_max_step_m=0.0250
+[python3-3] [INFO] [1790444555.834175676] [frame_probe]: map_robot_max_step_m=1.5504
+[python3-3] [INFO] [1790444555.834511787] [frame_probe]: odom_nose_max_step_m=0.0251
+[python3-3] [INFO] [1790444555.834836942] [frame_probe]: map_nose_max_step_m=1.6979
+[python3-3] [INFO] [1790444555.835168402] [frame_probe]: kitchen_in_base_max_step_m=2.3272
+[python3-3] [INFO] [1790444555.835488544] [frame_probe]: odom_robot_final=(+2.695,+0.295)
+[python3-3] [INFO] [1790444555.835822309] [frame_probe]: map_robot_final=(+3.931,+2.001)
+[python3-3] [INFO] [1790444555.836174525] [frame_probe]: kitchen_in_base_final=(-0.174,-2.262)
+[python3-3] [INFO] [1790444555.836519761] [frame_probe]: ==== END SUMMARY ====
+
+--- MAP JUMP line ---
+[python3-2] [WARN] [1790444549.822479720] [map_localizer]: MAP JUMP applied map->odom  x=+1.500 y=+0.800 yaw=+0.350
+
+--- highlights (around jump) ---
+[python3-1] [INFO] [1790444545.346837765] [odom_driver]: ODOM pose x=+0.125 y=+0.001 yaw=+0.010
+[python3-3] [INFO] [1790444545.834924825] [frame_probe]: t= 1.00s  odom_robot=(+0.242,+0.002)  map_robot=(+0.242,+0.002)
+[python3-1] [INFO] [1790444545.846762567] [odom_driver]: ODOM pose x=+0.250 y=+0.003 yaw=+0.020
+[python3-1] [INFO] [1790444546.346729325] [odom_driver]: ODOM pose x=+0.375 y=+0.006 yaw=+0.030
+[python3-3] [INFO] [1790444546.833807800] [frame_probe]: t= 2.00s  odom_robot=(+0.492,+0.010)  map_robot=(+0.492,+0.010)
+[python3-1] [INFO] [1790444546.846923487] [odom_driver]: ODOM pose x=+0.500 y=+0.010 yaw=+0.040
+[python3-1] [INFO] [1790444547.346904849] [odom_driver]: ODOM pose x=+0.625 y=+0.016 yaw=+0.050
+[python3-3] [INFO] [1790444547.833799019] [frame_probe]: t= 3.00s  odom_robot=(+0.741,+0.022)  map_robot=(+0.741,+0.022)
+[python3-1] [INFO] [1790444547.846790037] [odom_driver]: ODOM pose x=+0.750 y=+0.023 yaw=+0.060
+[python3-1] [INFO] [1790444548.346614483] [odom_driver]: ODOM pose x=+0.874 y=+0.031 yaw=+0.070
+[python3-3] [INFO] [1790444548.833686483] [frame_probe]: t= 4.00s  odom_robot=(+0.991,+0.040)  map_robot=(+0.991,+0.040)
+[python3-1] [INFO] [1790444548.846736156] [odom_driver]: ODOM pose x=+0.999 y=+0.040 yaw=+0.080
+[python3-1] [INFO] [1790444549.346769343] [odom_driver]: ODOM pose x=+1.123 y=+0.051 yaw=+0.090
+[python3-2] [WARN] [1790444549.822479720] [map_localizer]: MAP JUMP applied map->odom  x=+1.500 y=+0.800 yaw=+0.350
+[python3-3] [INFO] [1790444549.833740124] [frame_probe]: t= 5.00s  odom_robot=(+1.240,+0.062)  map_robot=(+2.397,+1.063)
+[python3-1] [INFO] [1790444549.846748927] [odom_driver]: ODOM pose x=+1.248 y=+0.063 yaw=+0.100
+[python3-1] [INFO] [1790444550.346882102] [odom_driver]: ODOM pose x=+1.372 y=+0.076 yaw=+0.110
+[python3-3] [INFO] [1790444550.833673413] [frame_probe]: t= 6.00s  odom_robot=(+1.488,+0.089)  map_robot=(+2.867,+1.394)
+[python3-1] [INFO] [1790444550.846801636] [odom_driver]: ODOM pose x=+1.496 y=+0.090 yaw=+0.120
+[python3-1] [INFO] [1790444551.346813214] [odom_driver]: ODOM pose x=+1.620 y=+0.106 yaw=+0.130
+[python3-3] [INFO] [1790444551.833752924] [frame_probe]: t= 7.00s  odom_robot=(+1.736,+0.122)  map_robot=(+3.089,+1.510)
+[python3-1] [INFO] [1790444551.846762092] [odom_driver]: ODOM pose x=+1.744 y=+0.123 yaw=+0.140
+[python3-1] [INFO] [1790444552.346998337] [odom_driver]: ODOM pose x=+1.868 y=+0.141 yaw=+0.150
+[python3-3] [INFO] [1790444552.833708490] [frame_probe]: t= 8.00s  odom_robot=(+1.983,+0.159)  map_robot=(+3.308,+1.629)
+[python3-1] [INFO] [1790444552.846844874] [odom_driver]: ODOM pose x=+1.991 y=+0.160 yaw=+0.160
+[python3-1] [INFO] [1790444553.346872502] [odom_driver]: ODOM pose x=+2.115 y=+0.181 yaw=+0.170
+[python3-3] [INFO] [1790444553.833999875] [frame_probe]: t= 9.00s  odom_robot=(+2.230,+0.201)  map_robot=(+3.525,+1.754)
+[python3-1] [INFO] [1790444553.846782967] [odom_driver]: ODOM pose x=+2.238 y=+0.203 yaw=+0.180
+[python3-1] [INFO] [1790444554.346803994] [odom_driver]: ODOM pose x=+2.361 y=+0.226 yaw=+0.190
+[python3-3] [INFO] [1790444554.833570155] [frame_probe]: t=10.00s  odom_robot=(+2.475,+0.248)  map_robot=(+3.740,+1.882)
+
+----- C -----
+=== C ===
+ROS_DOMAIN_ID=122
+mode=dual_parent_conflict
+
+--- SUMMARY ---
+[INFO] [1790444565.772891373] [conflict_demo]: ==== SUMMARY ====
+[INFO] [1790444565.773645494] [conflict_demo]: scenario=dual_parent_conflict
+[INFO] [1790444565.774241317] [conflict_demo]: phase_final=dual_parent
+[INFO] [1790444565.774873671] [conflict_demo]: lookup_ok=118
+[INFO] [1790444565.775403815] [conflict_demo]: lookup_fail=120
+[INFO] [1790444565.775812070] [conflict_demo]: note=REP-105 requires map->odom->base_link (one parent per frame)
+[INFO] [1790444565.776192018] [conflict_demo]: ==== END SUMMARY ====
+
+--- conflict / lookup evidence ---
+[WARN] [1790444559.823257317] [conflict_demo]: lookup odom->base_link FAILED: "odom" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444559.823875265] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444559.873099154] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444559.923167118] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444559.973241709] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.023425132] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.073472775] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.123463611] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.173285731] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1790444560.223213792] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[ERROR] [1790444561.773463537] [conflict_demo]: ILLEGAL: adding map->base_link while odom->base_link exists
+[WARN] [1790444561.774717208] [conflict_demo]: lookup map->base_link FAILED: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1790444561.775331634] [conflict_demo]: t=2.0s phase=dual_parent map->odom_edge=NO ok=39 fail=41
+[WARN] [1790444561.824313356] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444561.873758171] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444561.923141242] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444561.973220546] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.023141790] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.073963357] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.123847542] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.173751188] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444562.223081149] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[INFO] [1790444562.773215314] [conflict_demo]: t=3.0s phase=dual_parent map->odom_edge=NO ok=59 fail=61
+[WARN] [1790444563.773205082] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[INFO] [1790444563.773944728] [conflict_demo]: t=4.0s phase=dual_parent map->odom_edge=NO ok=79 fail=81
+[WARN] [1790444563.823386062] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444563.873132814] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444563.923151087] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444563.973117073] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.023177949] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.073163052] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.123305579] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.173190258] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[WARN] [1790444564.223168601] [conflict_demo]: lookup odom->base_link FAILED: Could not find a connection between 'odom' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[INFO] [1790444564.773380365] [conflict_demo]: t=5.0s phase=dual_parent map->odom_edge=NO ok=99 fail=101
+[INFO] [1790444565.773645494] [conflict_demo]: scenario=dual_parent_conflict
+[INFO] [1790444565.774241317] [conflict_demo]: phase_final=dual_parent
+[INFO] [1790444565.774873671] [conflict_demo]: lookup_ok=118
+[INFO] [1790444565.775403815] [conflict_demo]: lookup_fail=120
+[INFO] [1790444565.775812070] [conflict_demo]: note=REP-105 requires map->odom->base_link (one parent per frame)
+
