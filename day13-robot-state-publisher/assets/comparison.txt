@@ -1,0 +1,128 @@
+Day 13 — who publishes the robot TF tree
+----- A -----
+=== A ===
+ROS_DOMAIN_ID=130
+nodes: robot_state_publisher only
+
+--- ros2 node list ---
+/robot_state_publisher
+
+--- /tf publishers ---
+Type: tf2_msgs/msg/TFMessage
+
+Publisher count: 1
+
+Node name: robot_state_publisher
+Node namespace: /
+Topic type: tf2_msgs/msg/TFMessage
+Endpoint type: PUBLISHER
+GID: 01.0f.77.60.32.1b.2d.57.00.00.00.00.00.00.12.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+--- /tf_static publishers ---
+Type: tf2_msgs/msg/TFMessage
+
+Publisher count: 1
+
+Node name: robot_state_publisher
+Node namespace: /
+Topic type: tf2_msgs/msg/TFMessage
+Endpoint type: PUBLISHER
+GID: 01.0f.77.60.32.1b.2d.57.00.00.00.00.00.00.13.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+--- /joint_states publishers ---
+Type: sensor_msgs/msg/JointState
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: robot_state_publisher
+Node namespace: /
+Topic type: sensor_msgs/msg/JointState
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.77.60.32.1b.2d.57.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+
+--- TF lookups (fixed should exist; full arm should not) ---
+TF base_link -> torso: x=+0.0000 y=+0.0000 z=+0.1000
+TF forearm -> hand: x=+0.2400 y=+0.0000 z=+0.0000
+TF base_link -> hand: NOT_AVAILABLE
+TF map -> base_link: NOT_AVAILABLE
+
+----- B -----
+=== B ===
+ROS_DOMAIN_ID=131
+
+--- pose 0 / 0 ---
+TF base_link -> hand: x=+0.6000 y=+0.0000 z=+0.4200
+
+--- pose 0.80 / 1.20 ---
+TF base_link -> hand: x=+0.1752 y=+0.0000 z=+0.0009
+
+Expect: hand translation changes. joint_angles does not publish TF.
+
+----- C -----
+=== C ===
+ROS_DOMAIN_ID=133
+Question: which node owns /tf, /tf_static, and /joint_states?
+
+Recaptured after the first smoke pass reported "Unknown topic"
+(discovery miss while leftover processes were still shutting down).
+World-frame lookups below are from that first pass on the same domain.
+
+--- ros2 node list ---
+/joint_angles
+/robot_state_publisher
+
+--- /tf publishers ---
+Publisher count: 1
+Node name: robot_state_publisher
+Durability: VOLATILE
+
+--- /tf_static publishers ---
+Publisher count: 1
+Node name: robot_state_publisher
+Durability: TRANSIENT_LOCAL
+
+--- /joint_states publishers ---
+Publisher count: 1
+Node name: joint_angles
+Subscription count: 1
+Node name: robot_state_publisher (SUBSCRIPTION)
+
+joint_angles does not appear as a /tf or /tf_static publisher.
+
+--- world frames (RSP must not invent these) ---
+TF map -> base_link: NOT_AVAILABLE
+TF odom -> base_link: NOT_AVAILABLE
+

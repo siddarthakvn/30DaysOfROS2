@@ -1,0 +1,33 @@
+=== C ===
+ROS_DOMAIN_ID=133
+Question: which node owns /tf, /tf_static, and /joint_states?
+
+Recaptured after the first smoke pass reported "Unknown topic"
+(discovery miss while leftover processes were still shutting down).
+World-frame lookups below are from that first pass on the same domain.
+
+--- ros2 node list ---
+/joint_angles
+/robot_state_publisher
+
+--- /tf publishers ---
+Publisher count: 1
+Node name: robot_state_publisher
+Durability: VOLATILE
+
+--- /tf_static publishers ---
+Publisher count: 1
+Node name: robot_state_publisher
+Durability: TRANSIENT_LOCAL
+
+--- /joint_states publishers ---
+Publisher count: 1
+Node name: joint_angles
+Subscription count: 1
+Node name: robot_state_publisher (SUBSCRIPTION)
+
+joint_angles does not appear as a /tf or /tf_static publisher.
+
+--- world frames (RSP must not invent these) ---
+TF map -> base_link: NOT_AVAILABLE
+TF odom -> base_link: NOT_AVAILABLE
