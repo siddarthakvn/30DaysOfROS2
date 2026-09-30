@@ -1,5 +1,7 @@
 # LinkedIn draft — Day 14
 
+**Hero:** [`01-hero.png`](01-hero.png)
+
 **Question:** I pressed one keyboard key. How did that make a simulated robot move?
 
 When you paste this into LinkedIn, delete the words `@Boston Dynamics`, type `@`, and choose the **Boston Dynamics** company page. A pasted name does not notify them. The mention does.
