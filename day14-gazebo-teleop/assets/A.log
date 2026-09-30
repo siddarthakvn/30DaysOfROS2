@@ -1,0 +1,23 @@
+=== A ===
+ROS_DOMAIN_ID=140
+Package: teleop_twist_keyboard moveBindings, speed=0.5 turn=1.0
+This node does not drive wheels. It only publishes geometry_msgs/Twist.
+
+--- key 'i' ---
+publisher log:
+[INFO] [1790788543.919940343] [key_twist]: KEY source=moveBindings['i'] topic=/model/vehicle_blue/cmd_vel linear.x=0.500 linear.y=0.000 angular.z=0.000
+echo:
+ECHO linear.x=0.500 linear.y=0.000 angular.z=0.000
+
+--- key 'j' ---
+publisher log:
+[INFO] [1790788546.213545977] [key_twist]: KEY source=moveBindings['j'] topic=/model/vehicle_blue/cmd_vel linear.x=0.000 linear.y=0.000 angular.z=1.000
+echo:
+ECHO linear.x=0.000 linear.y=0.000 angular.z=1.000
+
+--- key 'k' ---
+publisher log:
+[INFO] [1790788548.478041603] [key_twist]: KEY source=stop (key not in moveBindings) topic=/model/vehicle_blue/cmd_vel linear.x=0.000 linear.y=0.000 angular.z=0.000
+echo:
+ECHO linear.x=0.000 linear.y=0.000 angular.z=0.000
+

@@ -1,0 +1,102 @@
+Day 14 — key to simulated motion
+
+----- A -----
+=== A ===
+ROS_DOMAIN_ID=140
+Package: teleop_twist_keyboard moveBindings, speed=0.5 turn=1.0
+This node does not drive wheels. It only publishes geometry_msgs/Twist.
+
+--- key 'i' ---
+publisher log:
+[INFO] [1790788543.919940343] [key_twist]: KEY source=moveBindings['i'] topic=/model/vehicle_blue/cmd_vel linear.x=0.500 linear.y=0.000 angular.z=0.000
+echo:
+ECHO linear.x=0.500 linear.y=0.000 angular.z=0.000
+
+--- key 'j' ---
+publisher log:
+[INFO] [1790788546.213545977] [key_twist]: KEY source=moveBindings['j'] topic=/model/vehicle_blue/cmd_vel linear.x=0.000 linear.y=0.000 angular.z=1.000
+echo:
+ECHO linear.x=0.000 linear.y=0.000 angular.z=1.000
+
+--- key 'k' ---
+publisher log:
+[INFO] [1790788548.478041603] [key_twist]: KEY source=stop (key not in moveBindings) topic=/model/vehicle_blue/cmd_vel linear.x=0.000 linear.y=0.000 angular.z=0.000
+echo:
+ECHO linear.x=0.000 linear.y=0.000 angular.z=0.000
+
+
+----- B -----
+=== B ===
+ROS_DOMAIN_ID=141
+world=/usr/share/gz/gz-sim8/worlds/diff_drive.sdf
+Gazebo Harmonic server only. Bridge NOT started.
+
+--- ros2 topic info (ROS side) ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: key_twist
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.77.60.89.2d.20.40.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+--- gz topic info (Gazebo Transport side) ---
+Couldn't find a preferred IP via the getifaddrs() call; I'm assuming that your IP address is 127.0.0.1.  This should work for local processes, but will almost certainly not work if you have remote processes.Report to the disc-zmq development team to seek a fix.
+Couldn't find a preferred IP via the getifaddrs() call; I'm assuming that your IP address is 127.0.0.1.  This should work for local processes, but will almost certainly not work if you have remote processes.Report to the disc-zmq development team to seek a fix.
+Couldn't find a preferred IP via the getifaddrs() call; I'm assuming that your IP address is 127.0.0.1.  This should work for local processes, but will almost certainly not work if you have remote processes.Report to the disc-zmq development team to seek a fix.
+Couldn't find a preferred IP via the getifaddrs() call; I'm assuming that your IP address is 127.0.0.1.  This should work for local processes, but will almost certainly not work if you have remote processes.Report to the disc-zmq development team to seek a fix.
+No publishers on topic [/model/vehicle_blue/cmd_vel]
+Subscribers [Address, Message Type]:
+  tcp://127.0.0.1:36075, gz.msgs.Twist
+
+Expect: a ROS publisher exists, and no ROS-side bridge publisher on gz yet.
+
+----- C -----
+=== C ===
+ROS_DOMAIN_ID=142
+bridge=/model/vehicle_blue/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist
+Gazebo: Harmonic (gz sim 8). Humble docs show Fortress + ignition.msgs.
+This run uses gz.msgs.Twist because that is what this machine speaks.
+
+--- bridge log ---
+[INFO] [1790788570.883363573] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/vehicle_blue/cmd_vel (geometry_msgs/msg/Twist) -> /model/vehicle_blue/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+
+--- pose before ---
+BEFORE pose x=5.9306108358416978e-18 y=4.7771362748369746e-37
+
+--- after key i (linear.x=0.5, angular.z=0) ---
+[INFO] [1790788574.084501091] [key_twist]: KEY source=moveBindings['i'] topic=/model/vehicle_blue/cmd_vel linear.x=0.500 linear.y=0.000 angular.z=0.000
+AFTER_FORWARD pose x=1.7112500000003961 y=-2.4051664058381577e-16
+
+--- after stop, so the forward command can decay ---
+[INFO] [1790788578.191940078] [key_twist]: KEY source=stop (key not in moveBindings) topic=/model/vehicle_blue/cmd_vel linear.x=0.000 linear.y=0.000 angular.z=0.000
+AFTER_STOP pose x=2.0570000000025743 y=6.61955132953631e-16
+
+--- after linear.y=0.5 only (diff-drive cannot strafe) ---
+[INFO] [1790788582.057786534] [key_twist]: KEY source=override linear_y only topic=/model/vehicle_blue/cmd_vel linear.x=0.000 linear.y=0.500 angular.z=0.000
+AFTER_STRAFE pose x=2.0570000000025752 y=1.4467793460482133e-16
+
+--- gz topic publishers after bridge ---
+Couldn't find a preferred IP via the getifaddrs() call; I'm assuming that your IP address is 127.0.0.1.  This should work for local processes, but will almost certainly not work if you have remote processes.Report to the disc-zmq development team to seek a fix.
+Couldn't find a preferred IP via the getifaddrs() call; I'm assuming that your IP address is 127.0.0.1.  This should work for local processes, but will almost certainly not work if you have remote processes.Report to the disc-zmq development team to seek a fix.
+Couldn't find a preferred IP via the getifaddrs() call; I'm assuming that your IP address is 127.0.0.1.  This should work for local processes, but will almost certainly not work if you have remote processes.Report to the disc-zmq development team to seek a fix.
+Couldn't find a preferred IP via the getifaddrs() call; I'm assuming that your IP address is 127.0.0.1.  This should work for local processes, but will almost certainly not work if you have remote processes.Report to the disc-zmq development team to seek a fix.
+Publishers [Address, Message Type]:
+  tcp://127.0.0.1:44375, gz.msgs.Twist
+Subscribers [Address, Message Type]:
+  tcp://127.0.0.1:34563, gz.msgs.Twist
+  tcp://127.0.0.1:36075, gz.msgs.Twist
+
