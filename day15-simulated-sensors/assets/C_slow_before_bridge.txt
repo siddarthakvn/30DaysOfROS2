@@ -1,0 +1,7 @@
+gz topics:
+/lidar
+/lidar/points
+/stats
+/world/wall_slow/stats
+ros topics before bridge:
+(no /lidar in ROS)

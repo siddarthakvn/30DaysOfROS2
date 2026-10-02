@@ -96,7 +96,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [12](day12-tf2/) | Why does a robot need `base_link`, `odom`, and `map`? | TF2, coordinate frames, transforms | |
 | [13](day13-robot-state-publisher/) | Who actually publishes the robot's transform tree? | Robot State Publisher, Joint State Publisher, TF tree | |
 | [14](day14-gazebo-teleop/) | I pressed one keyboard key. How did that make a simulated robot move? | Gazebo, teleoperation, `/cmd_vel`, Twist, differential drive | |
-| 15 | My simulated LiDAR was perfect. Why is that a problem? | Gazebo sensors, plugins, LiDAR, IMU, noise, update rate | |
+| [15](day15-simulated-sensors/) | My simulated LiDAR was perfect. Why is that a problem? | Gazebo sensors, plugins, LiDAR, IMU, noise, update rate | ✅ |
 | 16 | How does wheel rotation become robot position? | Differential-drive kinematics, wheel velocities, odometry | |
 | 17 | Why does my robot oscillate around the target angle? | PID control, error, P/I/D terms, controller tuning | |
 | 18 | Wheel odometry drifts and IMUs drift — so how does a robot estimate its pose? | Sensor fusion, EKF, covariance, `robot_localization` | |

@@ -1,0 +1,2 @@
+[0m[INFO] [1790961211.367641850] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/lidar (gz.msgs.LaserScan) -> /lidar (sensor_msgs/msg/LaserScan)] (Lazy 0)[0m
+[0m[INFO] [1790961216.750782274] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
