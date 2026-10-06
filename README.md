@@ -97,7 +97,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [13](day13-robot-state-publisher/) | Who actually publishes the robot's transform tree? | Robot State Publisher, Joint State Publisher, TF tree | |
 | [14](day14-gazebo-teleop/) | I pressed one keyboard key. How did that make a simulated robot move? | Gazebo, teleoperation, `/cmd_vel`, Twist, differential drive | |
 | [15](day15-simulated-sensors/) | My simulated LiDAR was perfect. Why is that a problem? | Gazebo sensors, plugins, LiDAR, IMU, noise, update rate | ✅ |
-| 16 | How does wheel rotation become robot position? | Differential-drive kinematics, wheel velocities, odometry | |
+| [16](day16-odometry/) | How does wheel rotation become robot position? | Differential-drive kinematics, wheel velocities, odometry | ✅ |
 | 17 | Why does my robot oscillate around the target angle? | PID control, error, P/I/D terms, controller tuning | |
 | 18 | Wheel odometry drifts and IMUs drift — so how does a robot estimate its pose? | Sensor fusion, EKF, covariance, `robot_localization` | |
 | 19 | What actually happens when a robot "builds a map"? | LiDAR SLAM, scan matching, occupancy grids | |
