@@ -1,0 +1,1 @@
+SUMMARY case=fight yaw_deg=11.46 jumps=19 span_deg=11.46 yaw_var=1.000e-06 frame=odom child=base_link

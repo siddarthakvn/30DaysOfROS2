@@ -99,7 +99,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [15](day15-simulated-sensors/) | My simulated LiDAR was perfect. Why is that a problem? | Gazebo sensors, plugins, LiDAR, IMU, noise, update rate | ✅ |
 | [16](day16-odometry/) | How does wheel rotation become robot position? | Differential-drive kinematics, wheel velocities, odometry | ✅ |
 | [17](day17-pid/) | Why does my robot oscillate around the target angle? | PID control, error, P/I/D terms, controller tuning | ✅ |
-| 18 | Wheel odometry drifts and IMUs drift — so how does a robot estimate its pose? | Sensor fusion, EKF, covariance, `robot_localization` | |
+| [18](day18-ekf-localization/) | Wheel odometry drifts and IMUs drift — so how does a robot estimate its pose? | Sensor fusion, EKF, covariance, `robot_localization` | ✅ |
 | 19 | What actually happens when a robot "builds a map"? | LiDAR SLAM, scan matching, occupancy grids | |
 | 20 | A robot has a map — but how does it know where it is on that map? | Localization, AMCL, particle filters | |
 | 21 | What actually happens after I send a Nav2 goal? | Nav2 architecture, NavigateToPose, planner, controller | |
