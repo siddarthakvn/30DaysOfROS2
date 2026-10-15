@@ -100,7 +100,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [16](day16-odometry/) | How does wheel rotation become robot position? | Differential-drive kinematics, wheel velocities, odometry | ✅ |
 | [17](day17-pid/) | Why does my robot oscillate around the target angle? | PID control, error, P/I/D terms, controller tuning | ✅ |
 | [18](day18-ekf-localization/) | Wheel odometry drifts and IMUs drift — so how does a robot estimate its pose? | Sensor fusion, EKF, covariance, `robot_localization` | ✅ |
-| 19 | What actually happens when a robot "builds a map"? | LiDAR SLAM, scan matching, occupancy grids | |
+| [19](day19-slam/) | What actually happens when a robot "builds a map"? | LiDAR SLAM, scan matching, occupancy grids | ✅ |
 | 20 | A robot has a map — but how does it know where it is on that map? | Localization, AMCL, particle filters | |
 | 21 | What actually happens after I send a Nav2 goal? | Nav2 architecture, NavigateToPose, planner, controller | |
 | 22 | Why was my robot avoiding obstacles that didn't exist? | Global/local costmaps, obstacle layer, inflation layer | |

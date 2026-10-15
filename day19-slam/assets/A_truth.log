@@ -1,0 +1,49 @@
+SUMMARY mode=truth scans=16 mean_pose_error_m=0.0000 final_pose_error_m=0.0000 mean_wall_error_m=0.0000 right_wall_spread_m=0.0172 occupied_cells=322
+MAP
+                         
+                         
+  #####################  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #...................#  
+  #####################  
+                         
+                         
+MAP_END
+--- topic ---
+Type: nav_msgs/msg/OccupancyGrid
+
+Publisher count: 1
+
+Node name: map_builder
+Node namespace: /
+Topic type: nav_msgs/msg/OccupancyGrid
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.39.28.24.91.00.00.00.00.00.00.12.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
