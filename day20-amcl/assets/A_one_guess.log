@@ -1,0 +1,72 @@
+SUMMARY mode=one_guess particles=1 final_error_m=5.316 final_spread_m=0.000 kitchen_fraction=0.000
+step=0 error_m=5.316 spread_m=0.000 kitchen_fraction=0.000
+step=1 error_m=5.316 spread_m=0.000 kitchen_fraction=0.000
+step=2 error_m=5.316 spread_m=0.000 kitchen_fraction=0.000
+step=3 error_m=5.316 spread_m=0.000 kitchen_fraction=0.000
+step=4 error_m=5.316 spread_m=0.000 kitchen_fraction=0.000
+step=5 error_m=5.316 spread_m=0.000 kitchen_fraction=0.000
+MAP
+##########################################
+#              #           #             #
+#              #           #             #
+#              #           #       E     #
+#              #           #             #
+#              #           #             #
+#              #           #             #
+#              #           #             #
+#              #           #             #
+#        T     #           #             #
+#              #           #             #
+#                          ###############
+#                                        #
+#                                        #
+#                                        #
+#                                        #
+#              #                         #
+#              #                         #
+#              #                         #
+#              #                         #
+#              #                         #
+##########################################
+MAP_END
+--- topic ---
+Type: nav_msgs/msg/OccupancyGrid
+
+Publisher count: 1
+
+Node name: localizer
+Node namespace: /
+Topic type: nav_msgs/msg/OccupancyGrid
+Endpoint type: PUBLISHER
+GID: 01.0f.ab.c0.20.37.28.a2.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+Type: geometry_msgs/msg/PoseArray
+
+Publisher count: 1
+
+Node name: localizer
+Node namespace: /
+Topic type: geometry_msgs/msg/PoseArray
+Endpoint type: PUBLISHER
+GID: 01.0f.ab.c0.20.37.28.a2.00.00.00.00.00.00.12.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
