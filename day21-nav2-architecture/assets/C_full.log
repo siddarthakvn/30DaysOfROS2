@@ -1,0 +1,49 @@
+READY mode=full
+SUMMARY mode=full events=goal>path>cmd_vel result=SUCCEEDED path_poses=27 path_length_m=6.69 straight_m=4.60 path_max_y_m=2.50 final_error_m=0.130 cmd_nonzero=279 max_linear=0.45 hit_wall=0
+MAP
+                                
+                                
+                                
+                                
+                                
+                                
+           . .  . .             
+            #######             
+         .  ####### .           
+        .   #######   .         
+            #######             
+      .     #######     .       
+    .       #######       .     
+   S        #######       R     
+  .         #######        .    
+            #######             
+MAP_END
+Result:
+    result: {}
+
+Goal finished with status: SUCCEEDED
+--- topic ---
+Action: /navigate_to_pose
+Action clients: 0
+Action servers: 1
+    /navigator
+Type: nav_msgs/msg/Path
+
+Publisher count: 1
+
+Node name: navigator
+Node namespace: /
+Topic type: nav_msgs/msg/Path
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.8e.68.05.6c.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+

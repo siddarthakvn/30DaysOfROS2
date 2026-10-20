@@ -1,0 +1,49 @@
+READY mode=goal_only
+SUMMARY mode=goal_only events=goal result=ABORTED path_poses=0 path_length_m=0.00 straight_m=4.60 path_max_y_m=0.00 final_error_m=4.600 cmd_nonzero=0 max_linear=0.00 hit_wall=0
+MAP
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+            #######             
+            #######             
+            #######             
+            #######             
+            #######             
+            #######             
+   R        #######       G     
+            #######             
+            #######             
+MAP_END
+Result:
+    result: {}
+
+Goal finished with status: ABORTED
+--- topic ---
+Action: /navigate_to_pose
+Action clients: 0
+Action servers: 1
+    /navigator
+Type: nav_msgs/msg/Path
+
+Publisher count: 1
+
+Node name: navigator
+Node namespace: /
+Topic type: nav_msgs/msg/Path
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.c5.67.7f.9c.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
