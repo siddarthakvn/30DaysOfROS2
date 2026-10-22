@@ -103,7 +103,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [19](day19-slam/) | What actually happens when a robot "builds a map"? | LiDAR SLAM, scan matching, occupancy grids | ✅ |
 | [20](day20-amcl/) | A robot has a map — but how does it know where it is on that map? | Localization, AMCL, particle filters | ✅ |
 | [21](day21-nav2-architecture/) | What actually happens after I send a Nav2 goal? | Nav2 architecture, NavigateToPose, planner, controller | ✅ |
-| 22 | Why was my robot avoiding obstacles that didn't exist? | Global/local costmaps, obstacle layer, inflation layer | |
+| [22](day22-costmaps/) | Why was my robot avoiding obstacles that didn't exist? | Global/local costmaps, obstacle layer, inflation layer | ✅ |
 | 23 | How does a robot choose a path from A to B? | A*, Dijkstra, global path planning | |
 | 24 | What happens when an obstacle suddenly appears on the planned path? | Local controllers, dynamic obstacle avoidance, replanning | |
 | 25 | Why does Nav2 use Behavior Trees instead of one giant state machine? | Behavior Trees, fallback, recovery, retry | |

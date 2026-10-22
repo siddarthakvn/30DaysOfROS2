@@ -1,0 +1,105 @@
+SUMMARY mode=inflated global_cushion=254 local_cushion=outside phantom_lethal=1 inscribed_cells=60 gradient_cells=316 path_poses=89 path_length_m=4.90 straight_m=4.40 path_dev_m=0.57 min_clearance_m=0.552 through_cushion=0 mark_range_m=2.325 now_range_m=3.225
+MAP
+############################################################
+#OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO#
+#OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO#
+#OO++++++++++++++++++++++++++++++++++++++++++++++++++++++OO#
+#OO++++++++++++++++++++++++++++++++++++++++++++++++++++++OO#
+#OO++++++++++++++++++++++++++++++++++++++++++++++++++++++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                  +             +++OO#
+#OO+++                               +++++++          +++OO#
+#OO+++                              +++++++++         +++OO#
+#OO+++                             ++++++++++         +++OO#
+#OO+++                             +++OOOO++++        +++OO#
+#OO+++  ......                     +++OOOOO+++      . +++OO#
+#OO+++        .                    +++OOOOO+++    ..  +++OO#
+#OO+++         .                   +++OOOO++++  ..    +++OO#
+#OO+++          ..........         ++++++++++...      +++OO#
+#OO+++                    ...........+++++++.         +++OO#
+#OO+++                              ..+++++.          +++OO#
+#OO+++                                .....           +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO+++                                                +++OO#
+#OO++++++++++++++++++++++++++++++++++++++++++++++++++++++OO#
+#OO++++++++++++++++++++++++++++++++++++++++++++++++++++++OO#
+#OO++++++++++++++++++++++++++++++++++++++++++++++++++++++OO#
+#OO++++++++++++++++++++++++++++++++++++++++++++++++++++++OO#
+#OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO#
+#OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO#
+MAP_END
+READY mode=inflated
+--- topic ---
+Type: nav2_msgs/msg/Costmap
+
+Publisher count: 1
+
+Node name: costmap_demo
+Node namespace: /
+Topic type: nav2_msgs/msg/Costmap
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.8d.6c.40.80.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+Type: nav2_msgs/msg/Costmap
+
+Publisher count: 1
+
+Node name: costmap_demo
+Node namespace: /
+Topic type: nav2_msgs/msg/Costmap
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.8d.6c.40.80.00.00.00.00.00.00.12.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+Type: nav_msgs/msg/Path
+
+Publisher count: 1
+
+Node name: costmap_demo
+Node namespace: /
+Topic type: nav_msgs/msg/Path
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.8d.6c.40.80.00.00.00.00.00.00.13.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
