@@ -1,0 +1,85 @@
+SUMMARY mode=line reached=0 expanded=0 free_cells=4284 path_poses=0 path_length_m=0.00 straight_m=7.00 line_wall_hits=10
+MAP
+################################################################################
+#                                                                              #
+#                                                                              #
+#                                                                              #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                  B        #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####                                           #
+#                               ####          ####                             #
+#                               ####          ####                             #
+#                               ####          ####                             #
+#                               ####          ####                             #
+#                               ####          ####                             #
+#                               ####          ####                             #
+#                               ####          ####                             #
+#                               ####          ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#         A                                   ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                             ####                             #
+#                                                                              #
+#                                                                              #
+#                                                                              #
+################################################################################
+MAP_END
+READY mode=line
+--- topic ---
+Type: nav_msgs/msg/Path
+
+Publisher count: 1
+
+Node name: global_planner
+Node namespace: /
+Topic type: nav_msgs/msg/Path
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.e7.38.ce.17.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
