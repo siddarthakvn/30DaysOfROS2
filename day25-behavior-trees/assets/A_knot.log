@@ -1,0 +1,23 @@
+SUMMARY mode=knot result=NONE trace=- states=5 edges=20 grown_edges=0 added_edges=0
+READY mode=knot
+--- topic ---
+Type: nav2_msgs/msg/BehaviorTreeLog
+
+Publisher count: 1
+
+Node name: checklist
+Node namespace: /
+Topic type: nav2_msgs/msg/BehaviorTreeLog
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.3d.9d.08.20.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
