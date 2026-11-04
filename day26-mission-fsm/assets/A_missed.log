@@ -1,0 +1,25 @@
+SUMMARY mode=missed final=SEARCHING trace=SEARCHING>VERIFYING>SEARCHING events=SEEN>MISSED>HELD legal=2 rejected=1 lockdown=0 navigate_allowed=1 edges=3
+READY mode=missed
+--- topic ---
+data: SEARCHING
+---
+Type: std_msgs/msg/String
+
+Publisher count: 1
+
+Node name: coordinator
+Node namespace: /
+Topic type: std_msgs/msg/String
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.08.4b.1f.4b.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
