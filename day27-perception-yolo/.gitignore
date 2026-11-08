@@ -1,0 +1,6 @@
+assets/.ros_logs/
+assets/models/
+assets/frames/
+assets/annotated/
+__pycache__/
+*.pyc

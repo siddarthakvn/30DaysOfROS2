@@ -1,0 +1,383 @@
+=== street ===
+SUMMARY node=camera scene=street width=810 height=1080 encoding=bgr8 frame=front stamp_sec=1794135809 stamp_nsec=545232586
+READY node=camera scene=street
+SUMMARY node=detector scene=street width=810 height=1080 detections=5 persons=4 best_person=0.890 cx=740.2 cy=630.1 sx=139.5 sy=499.1 classes=person,person,person,bus,person frame=front stamp_sec=1794135809 stamp_nsec=545232586 stamp_match=1
+READY node=detector scene=street
+SUMMARY node=ear scene=street seen=1 best_person=0.890 class_id=person threshold=0.50 detections=5 frame=front stamp_sec=1794135809 stamp_nsec=545232586
+READY node=ear scene=street
+--- image ---
+Type: sensor_msgs/msg/Image
+
+Publisher count: 1
+
+Node name: front_camera
+Node namespace: /
+Topic type: sensor_msgs/msg/Image
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.5d.18.13.d7.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: yolo_detector
+Node namespace: /
+Topic type: sensor_msgs/msg/Image
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.a4.f7.5c.18.bb.73.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- detections ---
+header:
+  stamp:
+    sec: 1794135809
+    nanosec: 545232586
+  frame_id: front
+detections:
+- header:
+    stamp:
+      sec: 1794135809
+      nanosec: 545232586
+    frame_id: front
+  results:
+  - hypothesis:
+      class_id: person
+      score: 0.8902072310447693
+    pose:
+      pose:
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          w: 1.0
+      covariance:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  bbox:
+    center:
+      position:
+        x: 740.1840133666992
+        y: 630.1045074462891
+      theta: 0.0
+    size_x: 139.4696502685547
+    size_y: 499.0931625366211
+  id: person-0
+- header:
+    stamp:
+      sec: 1794135809
+      nanosec: 545232586
+    frame_id: front
+  results:
+  - hypothesis:
+      class_id: person
+      score: 0.8832789659500122
+    pose:
+      pose:
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          w: 1.0
+      covariance:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  bbox:
+    center:
+      position:
+        x: 282.7300214767456
+        y: 631.8028221130371
+      theta: 0.0
+    size_x: 122.10732078552246
+    size_y: 448.7658748626709
+  id: person-1
+- header:
+    stamp:
+      sec: 1794135809
+      nanosec: 545232586
+    frame_id: front
+  results:
+  - hypothesis:
+      class_id: person
+      score: 0.87844318151474
+    pose:
+      pose:
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          w: 1.0
+      covariance:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  bbox:
+    center:
+      position:
+        x: 147.5396318435669
+        y: 651.337251663208
+      theta: 0.0
+    size_x: 193.71622467041016
+    size_y: 508.07726669311523
+  id: person-2
+- header:
+    stamp:
+      sec: 1794135809
+      nanosec: 545232586
+    frame_id: front
+  results:
+  - hypothesis:
+      class_id: bus
+      score: 0.8433693647384644
+    pose:
+      pose:
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          w: 1.0
+      covariance:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  bbox:
+    center:
+      position:
+        x: 416.4514961242676
+        y: 503.26154708862305
+      theta: 0.0
+    size_x: 769.9252223968506
+    size_y: 545.0361843109131
+  id: bus-3
+- header:
+    stamp:
+      sec: 1794135809
+      nanosec: 545232586
+    frame_id: front
+  results:
+  - hypothesis:
+      class_id: person
+      score: 0.43630853295326233
+    pose:
+      pose:
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          w: 1.0
+      covariance:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  bbox:
+    center:
+      position:
+        x: 29.1095552444458
+        y: 709.0691356658936
+      theta: 0.0
+    size_x: 57.31985807418823
+    size_y: 318.46196365356445
+  id: person-4
+---
+--- mission ---
+data: SEEN
+---

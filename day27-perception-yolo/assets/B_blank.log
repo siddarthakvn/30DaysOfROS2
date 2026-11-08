@@ -1,0 +1,51 @@
+=== blank ===
+SUMMARY node=camera scene=blank width=640 height=480 encoding=bgr8 frame=front stamp_sec=1794135799 stamp_nsec=154921476
+READY node=camera scene=blank
+SUMMARY node=detector scene=blank width=640 height=480 detections=0 persons=0 best_person=0.000 cx=0.0 cy=0.0 sx=0.0 sy=0.0 classes=- frame=front stamp_sec=1794135799 stamp_nsec=154921476 stamp_match=1
+READY node=detector scene=blank
+SUMMARY node=ear scene=blank seen=0 best_person=0.000 class_id=- threshold=0.50 detections=0 frame=front stamp_sec=1794135799 stamp_nsec=154921476
+READY node=ear scene=blank
+--- image ---
+Type: sensor_msgs/msg/Image
+
+Publisher count: 1
+
+Node name: front_camera
+Node namespace: /
+Topic type: sensor_msgs/msg/Image
+Endpoint type: PUBLISHER
+GID: 01.0f.a4.f7.94.17.ae.3d.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: yolo_detector
+Node namespace: /
+Topic type: sensor_msgs/msg/Image
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.a4.f7.93.17.ea.1a.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- detections ---
+header:
+  stamp:
+    sec: 1794135799
+    nanosec: 154921476
+  frame_id: front
+detections: []
+---
+--- mission ---

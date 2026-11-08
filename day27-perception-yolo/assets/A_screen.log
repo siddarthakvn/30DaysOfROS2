@@ -1,0 +1,6 @@
+SUMMARY node=screen scene=street width=810 height=1080 detections=5 persons=4 best_person=0.890 published=0 seen=0
+READY node=screen scene=street
+--- topics ---
+Unknown topic '/front/image_raw'
+Unknown topic '/detections'
+Unknown topic '/mission_event'
