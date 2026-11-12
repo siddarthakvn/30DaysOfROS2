@@ -109,7 +109,7 @@ The emphasis is always on **why** something behaves the way it does — not just
 | [25](day25-behavior-trees/) | Why does Nav2 use Behavior Trees instead of one giant state machine? | Behavior Trees, fallback, recovery, retry | ✅ |
 | [26](day26-mission-fsm/) | How should a rescue robot transition from SEARCHING to VERIFYING to LOCKDOWN? | Finite state machines, mission logic, coordinator design | ✅ |
 | [27](day27-perception-yolo/) | Running YOLO is easy — but how do you make perception part of a ROS 2 system? | ROS images, OpenCV, `cv_bridge`, YOLOv8, detection topics | ✅ |
-| 28 | YOLO gives pixels. Nav2 needs map coordinates. How do we connect them? | Camera geometry, depth/distance, TF2, map-frame localization | |
+| [28](day28-pixels-to-map/) | YOLO gives pixels. Nav2 needs map coordinates. How do we connect them? | Camera geometry, depth/distance, TF2, map-frame localization | ✅ |
 | 29 | How can an ESP32 become part of a ROS 2 system? | micro-ROS, ESP32, DDS-XRCE, agent, bidirectional `/cmd_vel` + status | |
 | 30 | What breaks when you scale one ROS 2 robot to three? | Namespaces, topic isolation, multi-robot architecture, task allocation | |
 
