@@ -1,0 +1,22 @@
+SUMMARY node=scene u=276.522 v=250.870 depth_m=2.300000 cam_x=-0.200000 cam_y=0.050000 cam_z=2.300000 target_x=3.500 target_y=2.200 target_z=0.250 fx=500.0 fy=500.0 cx=320.0 cy=240.0 base_x=1.00 base_y=2.00 base_z=0.00 cam_dx=0.20 cam_dz=0.30 map_goal=0
+READY node=scene
+--- pixel ---
+header:
+  stamp:
+    sec: 1794543226
+    nanosec: 610528789
+  frame_id: camera_optical_frame
+point:
+  x: 276.52173913043487
+  y: 250.86956521739143
+  z: 0.0
+---
+--- depth ---
+data: 2.3
+---
+--- point_camera ---
+Unknown topic '/point_camera'
+--- point_map ---
+Unknown topic '/point_map'
+--- goal ---
+Unknown topic '/goal'
