@@ -1,0 +1,48 @@
+=== watchdog ===
+SUMMARY node=esp32_client mode=watchdog session=1 entities=3 cmd_rx=5 state=WATCHDOG_STOP vx=0.000 wz=0.000 left=0.000 right=0.000 peak_left=0.340 peak_right=0.460 watchdog_trips=1 tx_frames=11 rx_frames=9 crc_err=0
+READY node=esp32_client mode=watchdog
+SUMMARY node=agent mode=watchdog session=1 ros_node=esp32_base sub=/cmd_vel pub=/esp32/status cmd_forwarded=5 status_forwarded=7 last_state=WATCHDOG_STOP crc_err=0
+READY node=agent mode=watchdog
+SUMMARY node=driver mode=watchdog cmd_tx=5 status_rx=7 trace=IDLE>DRIVING>WATCHDOG_STOP last_state=WATCHDOG_STOP
+READY node=driver mode=watchdog
+--- nodes ---
+/esp32_base
+/teleop_driver
+--- cmd_vel ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: teleop_driver
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.bb.34.e1.48.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: esp32_base
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.a3.34.6e.22.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- status ---
+data: state=WATCHDOG_STOP cmd_rx=5 vx=0.000 wz=0.000 left=0.000 right=0.000
+---
