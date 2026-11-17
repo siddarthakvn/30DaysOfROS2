@@ -1,0 +1,49 @@
+=== no_agent ===
+SUMMARY node=esp32_client mode=no_agent session=0 entities=0 cmd_rx=0 state=NO_AGENT vx=0.000 wz=0.000 left=0.000 right=0.000 peak_left=0.000 peak_right=0.000 watchdog_trips=0 tx_frames=6 rx_frames=0 crc_err=0
+READY node=esp32_client mode=no_agent
+SUMMARY node=driver mode=no_agent cmd_tx=10 status_rx=0 trace=NONE last_state=NONE
+READY node=driver mode=no_agent
+--- nodes ---
+/teleop_driver
+--- cmd_vel ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: teleop_driver
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.bc.33.ba.0e.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+--- status ---
+Type: std_msgs/msg/String
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: teleop_driver
+Node namespace: /
+Topic type: std_msgs/msg/String
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.bc.33.ba.0e.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+

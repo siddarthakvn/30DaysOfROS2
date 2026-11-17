@@ -1,0 +1,51 @@
+=== bridged ===
+SUMMARY node=esp32_client mode=bridged session=1 entities=3 cmd_rx=5 state=DRIVING vx=0.400 wz=0.400 left=0.340 right=0.460 peak_left=0.340 peak_right=0.460 watchdog_trips=0 tx_frames=10 rx_frames=9 crc_err=0
+READY node=esp32_client mode=bridged
+SUMMARY node=agent mode=bridged session=1 ros_node=esp32_base sub=/cmd_vel pub=/esp32/status cmd_forwarded=5 status_forwarded=6 last_state=DRIVING crc_err=0
+READY node=agent mode=bridged
+SUMMARY node=driver mode=bridged cmd_tx=5 status_rx=5 trace=IDLE>DRIVING last_state=DRIVING
+READY node=driver mode=bridged
+--- nodes ---
+/esp32_base
+/teleop_driver
+--- cmd_vel ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: teleop_driver
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.45.34.d8.28.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: esp32_base
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.2d.34.99.7c.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- status ---
+A message was lost!!!
+	total count change:1
+	total count: 1---
+data: state=DRIVING cmd_rx=31 vx=0.400 wz=0.400 left=0.340 right=0.460
+---
