@@ -1,0 +1,152 @@
+[INFO] [launch]: All log files can be found below /home/siddartha/Downloads/30-days-ros2/day30-multi-robot/assets/.ros_logs/2026-11-20-10-42-10-729647-siddartha-Latitude-7420-12816
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [python3-1]: process started with pid [12820]
+[INFO] [python3-2]: process started with pid [12822]
+[INFO] [python3-3]: process started with pid [12824]
+[INFO] [python3-4]: process started with pid [12826]
+[INFO] [python3-5]: process started with pid [12828]
+[INFO] [python3-6]: process started with pid [12830]
+[INFO] [python3-7]: process started with pid [12832]
+[INFO] [python3-8]: process started with pid [12834]
+[python3-7] COORDINATOR winner=r1 r1_cost_m=1.500 r2_cost_m=2.500 r3_cost_m=3.202
+[python3-8] ROBOT mode=coordinated id=r1 pos=(2.464,3.000) travel_m=1.464 err_m=0.036 rx_cmds=35 frame=r1/base_link
+[python3-8] ROBOT mode=coordinated id=r2 pos=(1.000,1.000) travel_m=0.000 err_m=2.500 rx_cmds=0 frame=r2/base_link
+[python3-8] ROBOT mode=coordinated id=r3 pos=(5.000,1.000) travel_m=0.000 err_m=3.202 rx_cmds=0 frame=r3/base_link
+[python3-8] SUMMARY mode=coordinated winner=r1 moved_robots=1 at_target=1 total_travel_m=1.464 min_pair_sep_m=2.479 r1_err_m=0.036 r2_err_m=2.500 r3_err_m=3.202 r1_cmds=35 r2_cmds=0 r3_cmds=0
+[python3-8] READY mode=coordinated
+[INFO] [python3-2]: process has finished cleanly [pid 12822]
+[INFO] [python3-6]: process has finished cleanly [pid 12830]
+[INFO] [python3-4]: process has finished cleanly [pid 12826]
+[INFO] [python3-7]: process has finished cleanly [pid 12832]
+[INFO] [python3-3]: process has finished cleanly [pid 12824]
+[INFO] [python3-8]: process has finished cleanly [pid 12834]
+[INFO] [python3-1]: process has finished cleanly [pid 12820]
+[INFO] [python3-5]: process has finished cleanly [pid 12828]
+--- nodes ---
+/fleet_auditor
+/fleet_coordinator
+/r1/base
+/r1/controller
+/r2/base
+/r2/controller
+/r3/base
+/r3/controller
+--- topics ---
+/fleet/assignment
+/fleet/freeze
+/fleet/ready_r1
+/fleet/ready_r3
+/fleet/report_r1
+/fleet/report_r3
+/fleet/target
+/parameter_events
+/r1/cmd_vel
+/r1/goal
+/r1/odom
+/r2/cmd_vel
+/r2/goal
+/r2/odom
+/r3/cmd_vel
+/r3/goal
+/r3/odom
+/rosout
+/tf
+--- r1_cmd_vel_info ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: controller
+Node namespace: /r1
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.16.32.cb.62.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: base
+Node namespace: /r1
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.14.32.5b.b7.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- r2_cmd_vel_info ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: controller
+Node namespace: /r2
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.1a.32.f1.11.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: base
+Node namespace: /r2
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.18.32.ae.43.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- tf_r1 ---
+[0m[INFO] [1795151537.937901787] [tf2_echo]: Waiting for transform map ->  r1/base_link: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist[0m
+At time 1795151538.890436115
+- Translation: [2.464, 3.000, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  2.464
+  0.000  1.000  0.000  3.000
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+At time 1795151539.890737894
+- Translation: [2.464, 3.000, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  2.464
+  0.000  1.000  0.000  3.000
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+[0m[INFO] [1795151540.806346155] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+--- assignment ---
+data: winner=r1 costs=r1:1.500,r2:2.500,r3:3.202
+---
+--- summary_echo ---
+data: SUMMARY mode=coordinated winner=r1 moved_robots=1 at_target=1 total_travel_m=1.464 min_pair_sep_m=2.479 r1_err_m=0.036 r2_err_m=...
+---

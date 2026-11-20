@@ -1,0 +1,144 @@
+[INFO] [launch]: All log files can be found below /home/siddartha/Downloads/30-days-ros2/day30-multi-robot/assets/.ros_logs/2026-11-20-10-41-54-873651-siddartha-Latitude-7420-12384
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [python3-1]: process started with pid [12388]
+[INFO] [python3-2]: process started with pid [12390]
+[INFO] [python3-3]: process started with pid [12392]
+[INFO] [python3-4]: process started with pid [12394]
+[INFO] [python3-5]: process started with pid [12396]
+[INFO] [python3-6]: process started with pid [12398]
+[INFO] [python3-7]: process started with pid [12400]
+[python3-7] ROBOT mode=uncoordinated id=r1 pos=(2.464,3.000) travel_m=1.464 err_m=0.036 rx_cmds=35 frame=r1/base_link
+[python3-7] ROBOT mode=uncoordinated id=r2 pos=(2.478,2.970) travel_m=2.463 err_m=0.037 rx_cmds=49 frame=r2/base_link
+[python3-7] ROBOT mode=uncoordinated id=r3 pos=(2.529,2.977) travel_m=3.164 err_m=0.037 rx_cmds=59 frame=r3/base_link
+[python3-7] SUMMARY mode=uncoordinated winner=none moved_robots=3 at_target=3 total_travel_m=7.091 min_pair_sep_m=0.033 r1_err_m=0.036 r2_err_m=0.037 r3_err_m=0.037 r1_cmds=35 r2_cmds=49 r3_cmds=59
+[python3-7] READY mode=uncoordinated
+[python3-3] Traceback (most recent call last):
+[python3-3]   File "/home/siddartha/Downloads/30-days-ros2/day30-multi-robot/ros2_nodes/robot_base.py", line 131, in <module>
+[python3-3]     main()
+[python3-3]   File "/home/siddartha/Downloads/30-days-ros2/day30-multi-robot/ros2_nodes/robot_base.py", line 121, in main
+[python3-3]     rclpy.spin(node)
+[python3-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[python3-3]     executor.spin_once()
+[python3-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+[python3-3]     self._spin_once_impl(timeout_sec)
+[python3-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 797, in _spin_once_impl
+[python3-3]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[python3-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 780, in wait_for_ready_callbacks
+[python3-3]     return next(self._cb_iter)
+[python3-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 653, in _wait_for_ready_callbacks
+[python3-3]     wait_set = _rclpy.WaitSet(
+[python3-3] rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
+[INFO] [python3-6]: process has finished cleanly [pid 12398]
+[INFO] [python3-2]: process has finished cleanly [pid 12390]
+[INFO] [python3-7]: process has finished cleanly [pid 12400]
+[INFO] [python3-4]: process has finished cleanly [pid 12394]
+[INFO] [python3-1]: process has finished cleanly [pid 12388]
+[INFO] [python3-5]: process has finished cleanly [pid 12396]
+[ERROR] [python3-3]: process has died [pid 12392, exit code 1, cmd 'python3 -u /home/siddartha/Downloads/30-days-ros2/day30-multi-robot/ros2_nodes/robot_base.py --ros-args -r __ns:=/r2 -p robot_id:=r2 -p mode:=uncoordinated'].
+--- nodes ---
+/fleet_auditor
+/r1/base
+/r1/controller
+/r2/base
+/r2/controller
+/r3/base
+/r3/controller
+--- topics ---
+/parameter_events
+/rosout
+--- r1_cmd_vel_info ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: controller
+Node namespace: /r1
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.66.30.2a.8c.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: base
+Node namespace: /r1
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.64.30.54.76.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- r2_cmd_vel_info ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: controller
+Node namespace: /r2
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.6a.30.d4.f9.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: base
+Node namespace: /r2
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.68.30.11.14.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- tf_r1 ---
+[0m[INFO] [1795151522.090004766] [tf2_echo]: Waiting for transform map ->  r1/base_link: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist[0m
+At time 1795151523.37604309
+- Translation: [2.464, 3.000, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  2.464
+  0.000  1.000  0.000  3.000
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+At time 1795151524.37666593
+- Translation: [2.464, 3.000, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  2.464
+  0.000  1.000  0.000  3.000
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+[0m[INFO] [1795151524.971315416] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+--- summary_echo ---
+data: SUMMARY mode=uncoordinated winner=none moved_robots=3 at_target=3 total_travel_m=7.091 min_pair_sep_m=0.033 r1_err_m=0.036 r2_er...
+---

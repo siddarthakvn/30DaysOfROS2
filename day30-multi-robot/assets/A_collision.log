@@ -1,0 +1,230 @@
+[INFO] [launch]: All log files can be found below /home/siddartha/Downloads/30-days-ros2/day30-multi-robot/assets/.ros_logs/2026-11-20-10-41-42-043240-siddartha-Latitude-7420-11963
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [python3-1]: process started with pid [11967]
+[INFO] [python3-2]: process started with pid [11969]
+[INFO] [python3-3]: process started with pid [11971]
+[INFO] [python3-4]: process started with pid [11973]
+[INFO] [python3-5]: process started with pid [11975]
+[INFO] [python3-6]: process started with pid [11977]
+[INFO] [python3-7]: process started with pid [11979]
+[python3-7] ROBOT mode=collision id=r1 pos=(1.151,7.770) travel_m=4.900 err_m=4.957 rx_cmds=213 frame=base_link
+[python3-7] ROBOT mode=collision id=r2 pos=(3.534,-2.880) travel_m=4.970 err_m=5.971 rx_cmds=213 frame=base_link
+[python3-7] ROBOT mode=collision id=r3 pos=(5.139,5.839) travel_m=4.970 err_m=3.876 rx_cmds=213 frame=base_link
+[python3-7] SUMMARY mode=collision winner=none moved_robots=3 at_target=0 total_travel_m=14.840 min_pair_sep_m=4.431 r1_err_m=4.957 r2_err_m=5.971 r3_err_m=3.876 r1_cmds=213 r2_cmds=213 r3_cmds=213
+[python3-7] READY mode=collision
+[INFO] [python3-6]: process has finished cleanly [pid 11977]
+[INFO] [python3-4]: process has finished cleanly [pid 11973]
+[INFO] [python3-2]: process has finished cleanly [pid 11969]
+[INFO] [python3-7]: process has finished cleanly [pid 11979]
+[INFO] [python3-1]: process has finished cleanly [pid 11967]
+[INFO] [python3-5]: process has finished cleanly [pid 11975]
+[INFO] [python3-3]: process has finished cleanly [pid 11971]
+--- nodes ---
+/fleet_auditor
+/r1/base
+/r1/controller
+/r2/base
+/r2/controller
+/r3/base
+/r3/controller
+--- topics ---
+/cmd_vel
+/fleet/assignment
+/fleet/freeze
+/fleet/ready_r1
+/fleet/ready_r2
+/fleet/ready_r3
+/fleet/report_r1
+/fleet/report_r2
+/fleet/report_r3
+/fleet/summary
+/fleet/target
+/odom
+/parameter_events
+/rosout
+/tf
+--- cmd_vel_info ---
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 3
+
+Node name: controller
+Node namespace: /r1
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.c1.2e.71.f8.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: controller
+Node namespace: /r2
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.c5.2e.5b.19.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: controller
+Node namespace: /r3
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.c9.2e.c4.c2.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 3
+
+Node name: base
+Node namespace: /r1
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.bf.2e.c8.12.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: base
+Node namespace: /r2
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.c3.2e.c2.6a.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: base
+Node namespace: /r3
+Topic type: geometry_msgs/msg/Twist
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.c7.2e.1b.ed.00.00.00.00.00.00.15.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- odom_info ---
+Type: nav_msgs/msg/Odometry
+
+Publisher count: 3
+
+Node name: base
+Node namespace: /r1
+Topic type: nav_msgs/msg/Odometry
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.bf.2e.c8.12.00.00.00.00.00.00.12.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: base
+Node namespace: /r2
+Topic type: nav_msgs/msg/Odometry
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.c3.2e.c2.6a.00.00.00.00.00.00.12.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: base
+Node namespace: /r3
+Topic type: nav_msgs/msg/Odometry
+Endpoint type: PUBLISHER
+GID: 01.0f.d5.6b.c7.2e.1b.ed.00.00.00.00.00.00.12.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 3
+
+Node name: controller
+Node namespace: /r1
+Topic type: nav_msgs/msg/Odometry
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.c1.2e.71.f8.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: controller
+Node namespace: /r2
+Topic type: nav_msgs/msg/Odometry
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.c5.2e.5b.19.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: controller
+Node namespace: /r3
+Topic type: nav_msgs/msg/Odometry
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.d5.6b.c9.2e.c4.c2.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+--- summary_echo ---
+data: SUMMARY mode=collision winner=none moved_robots=3 at_target=0 total_travel_m=14.840 min_pair_sep_m=4.431 r1_err_m=4.957 r2_err_m...
+---
